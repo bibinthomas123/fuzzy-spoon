@@ -61,7 +61,7 @@ function Data() {
         dedicated to my work.
       </p>
 
-      <a href="#contact" className="button button--flex">
+      <a href="/contact" className="button button--flex">
         Say Hello!{" "}
         <svg
           class="button__icon"
