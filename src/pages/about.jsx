@@ -4,9 +4,13 @@ import AboutImg from "../assests/profile.jpg";
 import CV from "../assests/Bibinsresume.pdf"
 import Info from "../components/Info";
 import WebsiteData from "../data/content";
+import ScrollDown from "../components/ScrollDown";
+import Qualification from "../components/Qualification";
+
 
 function About() {
   return (
+    <>
     <section className="about section">
       <h2 className="section__title">About Me</h2>
       <span className="section__subtitle">My introduction</span>
@@ -35,6 +39,9 @@ function About() {
         </div>
       </div>
     </section>
+    <ScrollDown />
+    <Qualification/>
+    </>
   );
 }
 

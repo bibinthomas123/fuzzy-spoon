@@ -1,10 +1,11 @@
 import "./App.css";
+import { Routes, Route, Link } from "react-router-dom";
 import About from "./pages/about";
 import Home from "./pages/Home";
 import Skills from "./pages/Skills";
 import Layout from "./pages/Layout";
-import { Routes, Route,Link } from "react-router-dom";
 import Service from "./pages/Service";
+import Qualification from "./components/Qualification";
 
 function NoMatch() {
   return (
@@ -15,22 +16,19 @@ function NoMatch() {
       </p>
     </div>
   );
-
 }
 function App() {
   return (
     <Routes>
-    <Route path="/" element={<Layout />}>
-      <Route index element={<Home />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/skills" element={<Skills />} />
-      <Route path="/service" element={<Service />} />
-      
-      <Route path="*" element={<NoMatch />} />
-    </Route>
-  </Routes>
-      
-   
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/skills" element={<Skills />} />
+        <Route path="/service" element={<Service />} />
+        <Route path="/qualification" element={<Qualification />} />
+        <Route path="*" element={<NoMatch />} />
+      </Route>
+    </Routes>
   );
 }
 
