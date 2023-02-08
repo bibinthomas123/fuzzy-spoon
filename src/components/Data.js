@@ -1,10 +1,11 @@
 import React from "react";
 
-function Data() {
+function Data(props) {
+  let { title, content } = props;
   return (
     <div className="home__data">
       <h1 className="home__title">
-        Hi, I'm Bibin
+        {title}
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="36"
@@ -56,10 +57,7 @@ function Data() {
         </svg>
       </h1>
       <h3 className="home__subtitle">Web Developer</h3>
-      <p className="home__description">
-        I'm a full stack developer based in India, and I'm very passionate and
-        dedicated to my work.
-      </p>
+      <p className="home__description">{content}</p>
 
       <a href="/contact" className="button button--flex">
         Say Hello!{" "}

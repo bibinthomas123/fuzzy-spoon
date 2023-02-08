@@ -1,7 +1,7 @@
 import "./App.css";
-import Header from "./components/header/Header";
 import About from "./pages/about/about";
 import Home from "./pages/Home/Home";
+import Skills from "./pages/skills/Skills";
 import Layout from "./pages/layout/Layout";
 import { Routes, Route,Link } from "react-router-dom";
 
@@ -21,7 +21,8 @@ function App() {
     <Routes>
     <Route path="/" element={<Layout />}>
       <Route index element={<Home />} />
-      <Route path="about" element={<About />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/skills" element={<Skills />} />
       
       <Route path="*" element={<NoMatch />} />
     </Route>
