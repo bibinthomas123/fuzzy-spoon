@@ -1,6 +1,6 @@
 import React from "react";
-import Sections from "../../components/sections";
-import WebsiteData from "../../data/content";
+import Sections from "../components/sections";
+import WebsiteData from "../data/content";
 function Skills() {
   return (
     <section className="skills section">

@@ -1,9 +1,9 @@
 import React from "react";
 // import "./about.css";
-import AboutImg from "../../assests/profile.jpg";
-import CV from "../../assests/Bibinsresume.pdf"
-import Info from "../../components/Info";
-import WebsiteData from "../../data/content";
+import AboutImg from "../assests/profile.jpg";
+import CV from "../assests/Bibinsresume.pdf"
+import Info from "../components/Info";
+import WebsiteData from "../data/content";
 
 function About() {
   return (
