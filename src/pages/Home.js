@@ -16,7 +16,6 @@ function Home() {
             content={WebsiteData.home.desc}
           />
         </div>
-        <ScrollDown />
       </div>
     </section>
   );

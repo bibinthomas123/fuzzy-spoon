@@ -159,6 +159,52 @@ const WebsiteData = {
       },
     ],
   },
+  portfolio: {
+    cardDetails: [
+      {
+        id: 1,
+        category: "DEVELOPMENT",
+        totalLike: "600",
+        title: "The services provide for design ",
+        image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      },
+      {
+        id: 2,
+        category: "APPLICATION",
+        totalLike: "750",
+        title: "Mobile app landing design & maintain",
+        image: "https://images.unsplash.com/photo-1515955656352-a1fa3ffcd111?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      },
+      {
+        id: 3,
+        category: "PHOTOSHOP",
+        totalLike: "630",
+        title: "Logo design creativity & Application ",
+        image: "./image/portfolio-03.jpg",
+      },
+      {
+        id: 4,
+        category: "FIGMA",
+        totalLike: "360",
+        title: "Mobile app landing design & Services",
+        image: "./image/portfolio-04.jpg",
+      },
+      {
+        id: 5,
+        category: "WEB DESIGN",
+        totalLike: "280",
+        title: "Design for tecnology & services",
+        image: "./image/portfolio-05.jpg",
+      },
+      {
+        id: 6,
+        category: "WEB DESIGN",
+        totalLike: "690",
+        title: "App for tecnology & services",
+        image: "./image/portfolio-06.jpg",
+      },
+    ],
+  },
 };
 
 export default WebsiteData;
