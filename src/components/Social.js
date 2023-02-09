@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Social = (props) => {
   let { data } = props;
@@ -6,14 +7,14 @@ const Social = (props) => {
   return (
     <div className="home__social">
       {data.map((item, index) => (
-        <a
+        <Link
           href={item.link}
           className="home__social-icon"
           target="_blank"
           key={index}
         >
           <i className={`uil ${item.icon}`}></i>
-        </a>
+        </Link>
       ))}
     </div>
   );

@@ -18,9 +18,11 @@
   --dark-bg: #ffffff;
   --gray-1: #bcb4b4;
   /* imp */
-  --deep-dark: #9b9b9b;  
-  --gray-2: #363636;
-  --white: white;
+  --deep-dark: #2c2c2c;  
+  --deep-dark2: #2d2d2d;  
+  --gray-2: #2c2c2c;
+  --white: var(--body-color);
+  --white-2: #b6b2b2;
   --black: black;
 
   /*========== Font and typography ==========*/

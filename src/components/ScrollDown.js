@@ -1,9 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function ScrollDown() {
   return (
     <div className="home__scroll">
-      <a href="#about" className="home__scroll-button button--flex">
+      <Link href="#about" className="home__scroll-button button--flex">
         <svg
           width="32px"
           height="32px"
@@ -41,7 +42,7 @@ function ScrollDown() {
         </svg>
         <span className="home__scroll-name">Scroll down</span>
         <i className="uil uil-arrow-down home__scroll-arrow"></i>
-      </a>
+      </Link>
     </div>
   );
 }

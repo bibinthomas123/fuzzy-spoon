@@ -5,7 +5,7 @@ import Home from "./pages/Home";
 import Skills from "./pages/Skills";
 import Layout from "./pages/Layout";
 import Service from "./pages/Service";
-import Portfolio from "./pages/portfolio";
+import Projects from "./pages/Projects";
 import Contact from "./pages/contact";
 
 function NoMatch() {
@@ -26,7 +26,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/skills" element={<Skills />} />
         <Route path="/service" element={<Service />} />
-        <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/portfolio" element={<Projects />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<NoMatch />} />
       </Route>

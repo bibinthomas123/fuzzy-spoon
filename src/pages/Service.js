@@ -60,8 +60,6 @@ function Service() {
           ))}
         </div>
       </section>
-
-      <Qualification />
     </>
   );
 }

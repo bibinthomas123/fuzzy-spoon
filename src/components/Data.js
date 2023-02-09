@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Data(props) {
   let { title, content } = props;
@@ -59,7 +60,7 @@ function Data(props) {
       <h3 className="home__subtitle">Web Developer</h3>
       <p className="home__description">{content}</p>
 
-      <a href="/contact" className="button button--flex">
+      <Link href="/contact" className="button button--flex">
         Say Hello!{" "}
         <svg
           class="button__icon"
@@ -78,7 +79,7 @@ function Data(props) {
             fill="var(--container-color)"
           ></path>
         </svg>
-      </a>
+      </Link>
     </div>
   );
 }
