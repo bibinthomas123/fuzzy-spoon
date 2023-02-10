@@ -36,7 +36,7 @@ const ItemStyles = styled.div`
 `;
 
 export default function ContactInfoItem({
-  icon =<i class='bx bx-map bx-sm' ></i>,
+  icon =<i className='bx bx-map bx-sm' ></i>,
   text = "I need text ",
 }) {
   return (

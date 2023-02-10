@@ -21,10 +21,9 @@ function NoMatch() {
 }
 function App() {
   const location = useLocation();
-  
+
   return (
     <AnimatePresence
-      exitBeforeEnter
       initial={false}
       mode="wait"
       onExitComplete={() => window.scrollTo(0, 0)}

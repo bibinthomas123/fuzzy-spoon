@@ -2,7 +2,6 @@ import React from "react";
 
 function SectionItem(props) {
   let { data, title } = props;
-  console.log(data, title);
 
   return (
     <div className="skills__content ">
