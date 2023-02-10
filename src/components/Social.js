@@ -8,7 +8,7 @@ const Social = (props) => {
     <div className="home__social">
       {data.map((item, index) => (
         <Link
-          href={item.link}
+          to={item.link}
           className="home__social-icon"
           target="_blank"
           key={index}

@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import ContactForm from "../components/ContactForm.js";
 import ContactInfoItem from "../components/ContactInfoItem.js";
-
+import { motion } from "framer-motion";
 const styles = {
   minWidth: 200,
   minHeight: 200,
@@ -63,7 +63,17 @@ const ContactSectionStyle = styled.div`
 
 export default function ContactSection() {
   return (
-    <div style={styles}>
+    <motion.div
+      style={styles}
+      initial={{ x: 300, opacity: 0 }}
+      animate={{ x: 0, opacity: 1 }}
+      exit={{ x: 300, opacity: 0 }}
+      transition={{
+        type: "spring",
+        stiffness: 260,
+        damping: 20,
+      }}
+    >
       <ContactSectionStyle>
         <div className="contact__container contact">
           <h2 className="section__title">Contact</h2>
@@ -86,6 +96,6 @@ export default function ContactSection() {
           </div>
         </div>
       </ContactSectionStyle>
-    </div>
+    </motion.div>
   );
 }

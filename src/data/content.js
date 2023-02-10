@@ -24,12 +24,12 @@ const WebsiteData = {
     desc: "Pursuing Computer Science and cognitive system .Aspiring AWS Solution Architect Associate. Organized an dependable candidate successful at managing multiple priorities with a positive attitude",
     cardDetails: [
       {
-        name: "Experience",
+        name: "Working at",
         desc: "Whizoid Studio",
       },
       {
-        name: "Projects",
-        desc: "30+ projects",
+        name: "Position",
+        desc: "Internship",
       },
       {
         name: "Status",
@@ -58,11 +58,11 @@ const WebsiteData = {
         },
         {
           name: "CSS",
-          level: "90%",
+          level: "80%",
         },
         {
           name: "Javascript",
-          level: "90%",
+          level: "70%",
         },
         {
           name: "Bootstrap",
@@ -70,7 +70,7 @@ const WebsiteData = {
         },
         {
           name: "React Js",
-          level: "90%",
+          level: "80%",
         },
         {
           name: "Git",
@@ -83,19 +83,19 @@ const WebsiteData = {
       skills: [
         {
           name: "Node Js",
-          level: "90%",
+          level: "80%",
         },
         {
           name: "Express Js",
-          level: "90%",
+          level: "85%",
         },
         {
           name: "MongoDB",
-          level: "90%",
+          level: "70%",
         },
         {
           name: "SQL",
-          level: "90%",
+          level: "70%",
         },
         {
           name: "Flask",

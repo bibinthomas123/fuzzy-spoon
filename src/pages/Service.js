@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import WebsiteData from "../data/content";
-import Qualification from "../components/Qualification";
+import { motion } from "framer-motion";
 function Service() {
   const [toggleState, setToggleState] = useState(0);
 
@@ -9,7 +9,16 @@ function Service() {
   };
   const data = WebsiteData.services;
   return (
-    <>
+    <motion.div
+      initial={{ x: 300, opacity: 0 }}
+      animate={{ x: 0, opacity: 1 }}
+      exit={{ x: 300, opacity: 0 }}
+      transition={{
+        type: "spring",
+        stiffness: 260,
+        damping: 20,
+      }}
+    >
       <section className="services section">
         <h2 className="section__title">{data.title}</h2>
         <span className="section__subtitle">{data.desc}</span>
@@ -60,7 +69,7 @@ function Service() {
           ))}
         </div>
       </section>
-    </>
+    </motion.div>
   );
 }
 

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import { MdSearch } from "react-icons/md";
+import { motion } from "framer-motion";
 import WebsiteData from "../data/content";
 import ProjectItem from "../components/ProjectItem";
 
@@ -65,7 +65,16 @@ export default function Projects() {
     }
   };
   return (
-    <>
+    <motion.div
+      initial={{ x: 300, opacity: 0 }}
+      animate={{ x: 0, opacity: 1 }}
+      exit={{ x: 300, opacity: 0 }}
+      transition={{
+        type: "spring",
+        stiffness: 260,
+        damping: 20,
+      }}
+    >
       <ProjectStyle>
         <div className="container">
           <h2 className="section__title">Projects</h2>
@@ -78,7 +87,7 @@ export default function Projects() {
                 onChange={handleChange}
                 placeholder="Project Name"
               />
-              <i className='bx bx-search searchIcon'></i>
+              <i className="bx bx-search searchIcon"></i>
             </form>
           </div>
           <div className="projects__allItems">
@@ -93,6 +102,6 @@ export default function Projects() {
           </div>
         </div>
       </ProjectStyle>
-    </>
+    </motion.div>
   );
 }
