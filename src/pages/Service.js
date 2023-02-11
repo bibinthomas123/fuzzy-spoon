@@ -24,7 +24,7 @@ function Service() {
         <span className="section__subtitle">{data.desc}</span>
         <div className="services__container container grid">
           {data.cardDetails.map((item, i) => (
-            <div className="services__content" key={i}>
+            <div className="services__content" key={i} >
               <React.Fragment>
                 <i className={`${item.icon} services__icon`}></i>
                 <h3 className="services__title">
@@ -59,7 +59,6 @@ function Service() {
 
                   <ul className="services__modal-services grid">
                     <li className="services__modal-service">
-                      {/* <i className="uil uil-check-circle services__modal-icon"></i> */}
                       <p className="services__modal-info">{item.content}</p>
                     </li>
                   </ul>

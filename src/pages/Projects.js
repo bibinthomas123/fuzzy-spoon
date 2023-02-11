@@ -56,7 +56,7 @@ export default function Projects() {
         item.name.toLowerCase().match(searchText.toLowerCase())
       )
     );
-  }, [searchText]);
+  }, [searchText,ProjectsInfo]);
   const handleChange = (e) => {
     e.preventDefault();
     setSearchText(e.target.value);

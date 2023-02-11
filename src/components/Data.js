@@ -60,7 +60,7 @@ function Data(props) {
       <h3 className="home__subtitle">Web Developer</h3>
       <p className="home__description">{content}</p>
 
-      <Link href="/contact" className="button button--flex">
+      <Link to={"/contact"}  className="button button--flex">
         Say Hello!{" "}
         <svg
           className="button__icon"

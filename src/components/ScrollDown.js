@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function ScrollDown() {
   return (
     <div className="home__scroll">
-      <Link href="#about" className="home__scroll-button button--flex">
+      <Link to={""} className="home__scroll-button button--flex">
         <svg
           width="32px"
           height="32px"
