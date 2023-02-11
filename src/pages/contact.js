@@ -3,10 +3,7 @@ import styled from "styled-components";
 import ContactForm from "../components/ContactForm.js";
 import ContactInfoItem from "../components/ContactInfoItem.js";
 import { motion } from "framer-motion";
-const styles = {
-  minWidth: 200,
-  minHeight: 200,
-};
+
 const ContactSectionStyle = styled.div`
   padding: 10rem 0;
   .contactSection__wrapper {
@@ -64,15 +61,14 @@ const ContactSectionStyle = styled.div`
 export default function ContactSection() {
   return (
     <motion.div
-      style={styles}
-      initial={{ x: 300, opacity: 0 }}
-      animate={{ x: 0, opacity: 1 }}
-      exit={{ x: 300, opacity: 0 }}
-      transition={{
-        type: "spring",
-        stiffness: 260,
-        damping: 20,
-      }}
+    initial={{ x: 300, opacity: 0 }}
+    animate={{ x: 0, opacity: 1 }}
+    exit={{ x:- 300, opacity: 0 }}
+    transition={{
+      type: "spring",
+      stiffness: 260,
+      damping: 20,
+    }}
     >
       <ContactSectionStyle>
         <div className="contact__container contact">

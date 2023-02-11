@@ -20,12 +20,12 @@ function Header() {
             </li>
             <li className="nav__item">
               <Link to={"/about"} className="nav__link">
-                <i className="uil uil-estate nav__icon" /> About
+                <i className="uil uil-user nav__icon" /> About
               </Link>
             </li>
             <li className="nav__item">
               <Link to={"/skills"} className="nav__link">
-                <i className="uil uil-estate nav__icon" /> Skills
+                <i className="uil uil-desktop-alt nav__icon" /> Skills
               </Link>
             </li>
             <li className="nav__item">

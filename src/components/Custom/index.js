@@ -3,11 +3,10 @@ import "./style.css";
 
 // TODO: Hide if cursor not moved
 const CustomCursor = () => {
-  // const { type } = useContext(CustomCursorContext);
   const secondaryCursor = React.useRef(null);
   const positionRef = React.useRef({
-    mouseX: 0,
-    mouseY: 0,
+    mouseX: -100,
+    mouseY: -100,
     destinationX: 0,
     destinationY: 0,
     distanceX: 0,

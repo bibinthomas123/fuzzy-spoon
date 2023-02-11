@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import WebsiteData from "../data/content";
 import { motion } from "framer-motion";
+
 function Service() {
   const [toggleState, setToggleState] = useState(0);
 
@@ -12,7 +13,7 @@ function Service() {
     <motion.div
       initial={{ x: 300, opacity: 0 }}
       animate={{ x: 0, opacity: 1 }}
-      exit={{ x: 300, opacity: 0 }}
+      exit={{ x: -300, opacity: 0 }}
       transition={{
         type: "spring",
         stiffness: 260,
@@ -24,7 +25,7 @@ function Service() {
         <span className="section__subtitle">{data.desc}</span>
         <div className="services__container container grid">
           {data.cardDetails.map((item, i) => (
-            <div className="services__content" key={i} >
+            <div className="services__content" key={i}>
               <React.Fragment>
                 <i className={`${item.icon} services__icon`}></i>
                 <h3 className="services__title">
@@ -42,14 +43,23 @@ function Service() {
                 <i className="uil uil-arrow-right services__button-icon"></i>
               </span>
 
-              <div
+              <section
                 className={
                   toggleState === item.id
                     ? "services__modal active-modal"
                     : "services__modal"
                 }
               >
-                <div className="services__modal-content">
+                <motion.div
+                  className="services__modal-content"
+                  animate={{
+                    opacity: toggleState === item.id ? 1 : 0,
+                    y: toggleState === item.id ? 0 : 50,
+                  }}
+                  initial={{ opacity: 0, y: 150 }}
+                  exit={{ opacity: 0, y: 150 }}
+                  transition={{ duration: 0.3 }}
+                >
                   <i
                     onClick={() => toggleTab(0)}
                     className="uil uil-times services__modal-close"
@@ -62,8 +72,8 @@ function Service() {
                       <p className="services__modal-info">{item.content}</p>
                     </li>
                   </ul>
-                </div>
-              </div>
+                </motion.div>
+              </section>
             </div>
           ))}
         </div>

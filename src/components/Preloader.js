@@ -10,8 +10,8 @@ const Preloader = () => {
         loader.current.style.display = "none";
       },
     });
-    tl.to(loader.current, { duration: 2, opacity: 1 });
-    tl.to(loader.current, { duration: 2, opacity: 0 });
+    tl.to(loader.current, { duration: 3, opacity: 1 });
+    tl.to(loader.current, { duration: 3, opacity: 0 });
   }, []);
 
   return (
@@ -24,6 +24,7 @@ const Preloader = () => {
         transform: "translate(-50%, -50%)",
         display: "flex",
         justifyContent: "center",
+        fontSize: "20px", 
         alignItems: "center",
         opacity: 0,
         zIndex: 999,

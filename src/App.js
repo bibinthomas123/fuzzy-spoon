@@ -1,5 +1,5 @@
 import "./App.css";
-import { Routes, Route, Link, useLocation } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import About from "./pages/about";
 import Home from "./pages/Home";
@@ -18,7 +18,7 @@ function App() {
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
-    }, 3000);
+    }, 5000);
   }, []);
   if (isLoading) {
     return <Preloader />;
