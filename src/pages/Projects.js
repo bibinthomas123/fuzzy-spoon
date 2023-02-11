@@ -56,7 +56,7 @@ export default function Projects() {
         item.name.toLowerCase().match(searchText.toLowerCase())
       )
     );
-  }, [searchText,ProjectsInfo]);
+  }, [searchText, ProjectsInfo]);
   const handleChange = (e) => {
     e.preventDefault();
     setSearchText(e.target.value);
@@ -66,31 +66,93 @@ export default function Projects() {
   };
   return (
     <motion.div
-    initial={{ x: 300, opacity: 0 }}
-    animate={{ x: 0, opacity: 1 }}
-    exit={{ x:- 300, opacity: 0 }}
-    transition={{
-      type: "spring",
-      stiffness: 260,
-      damping: 20,
-    }}
+      initial={{ x: 300, opacity: 0 }}
+      animate={{ x: 0, opacity: 1 }}
+      exit={{ x: -300, opacity: 0 }}
+      transition={{
+        type: "spring",
+        stiffness: 260,
+        damping: 20,
+      }}
     >
       <ProjectStyle>
-        <div className="container">
-          <h2 className="section__title">Projects</h2>
-          <span className="section__subtitle">Some of my recent works</span>
-          <div className="projects__searchBar">
+        <motion.div
+          className="container"
+          initial={{ y: 300, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          exit={{ y: -300, opacity: 0 }}
+          transition={{
+            type: "spring",
+            stiffness: 260,
+            damping: 20,
+          }}
+        >
+          <motion.h2
+            className="section__title"
+            initial={{ x: -300, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            exit={{ x: 300, opacity: 0 }}
+            transition={{
+              type: "spring",
+              stiffness: 260,
+              damping: 20,
+            }}
+          >
+            Projects
+          </motion.h2>
+          <motion.span
+            className="section__subtitle"
+            initial={{ x: 300, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            exit={{ x: -300, opacity: 0 }}
+            transition={{
+              type: "spring",
+              stiffness: 260,
+              damping: 20,
+            }}
+          >
+            Some of my recent works
+          </motion.span>
+          <motion.div
+            className="projects__searchBar"
+            initial={{ y: 300, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ y: -300, opacity: 0 }}
+            transition={{
+              type: "spring",
+              stiffness: 260,
+              damping: 20,
+            }}
+          >
             <form>
-              <input
+              <motion.input
                 type="text"
                 value={searchText}
                 onChange={handleChange}
                 placeholder="Project Name"
+                initial={{ x: 300, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                exit={{ x: -300, opacity: 0 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 260,
+                  damping: 20,
+                }}
               />
-              <i className="bx bx-search searchIcon"></i>
+              <motion.i
+                className="bx bx-search searchIcon"
+                initial={{ x: -300, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                exit={{ x: 300, opacity: 0 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 260,
+                  damping: 20,
+                }}
+              ></motion.i>
             </form>
-          </div>
-          <div className="projects__allItems">
+          </motion.div>
+          <motion.div className="projects__allItems" layout>
             {projectsData.map((item) => (
               <ProjectItem
                 key={item.id}
@@ -99,8 +161,8 @@ export default function Projects() {
                 img={item.img}
               />
             ))}
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </ProjectStyle>
     </motion.div>
   );

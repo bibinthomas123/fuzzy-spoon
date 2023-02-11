@@ -26,7 +26,7 @@ function App() {
   return (
     <>
       <AnimatePresence
-        initial={false}
+        // initial={false}
         mode="wait"
         onExitComplete={() => window.scrollTo(0, 0)}
       >

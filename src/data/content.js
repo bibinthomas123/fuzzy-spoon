@@ -1,4 +1,4 @@
-import { v4 as uuidv4 } from 'uuid';
+import { v4 as uuidv4 } from "uuid";
 
 const WebsiteData = {
   home: {
@@ -26,13 +26,16 @@ const WebsiteData = {
       {
         name: "Working at",
         desc: "Whizoid Studio",
+        icon: "bx bx-briefcase-alt-2",
       },
       {
         name: "Position",
         desc: "Internship",
+        icon: "uil uil-sitemap",
       },
       {
         name: "Status",
+        icon: "bx bx-bulb",
         desc: (
           <>
             <span

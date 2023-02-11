@@ -12,25 +12,73 @@ import { motion } from "framer-motion";
 function About() {
   return (
     <motion.div
-    initial={{ x: 300, opacity: 0 }}
-    animate={{ x: 0, opacity: 1 }}
-    exit={{ x: -300, opacity: 0 }}
-    transition={{
-      type: "spring",
-      stiffness: 260,
-      damping: 20,
-    }}
+      initial={{ x: 300, opacity: 0 }}
+      animate={{ x: 0, opacity: 1 }}
+      exit={{ x: -300, opacity: 0 }}
+      transition={{
+        type: "spring",
+        stiffness: 260,
+        damping: 20,
+      }}
     >
       <section className="about section">
-        <h2 className="section__title">About Me</h2>
-        <span className="section__subtitle">My introduction</span>
+        <motion.h2
+          className="section__title"
+          initial={{ x: 300, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          exit={{ x: -300, opacity: 0 }}
+          transition={{
+            type: "spring",
+            stiffness: 260,
+            damping: 20,
+          }}
+        >
+          About Me
+        </motion.h2>
+        <motion.span
+          className="section__subtitle"
+          initial={{ x: 300, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          exit={{ x: -300, opacity: 0 }}
+          transition={{
+            type: "spring",
+            stiffness: 260,
+            damping: 20,
+          }}
+        >
+          My introduction
+        </motion.span>
 
         <div className="about__container container grid">
-          <img src={AboutImg} alt="" className="about__img" />
+          <motion.img
+            src={AboutImg}
+            alt=""
+            className="about__img"
+            initial={{ x: 300, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            exit={{ x: -300, opacity: 0 }}
+            transition={{
+              type: "spring",
+              stiffness: 260,
+              damping: 20,
+            }}
+          />
 
           <div className="about__data">
             <Info data={WebsiteData.about.cardDetails} />
-            <p className="about__description">{WebsiteData.about.desc}</p>
+            <motion.p
+              className="about__description"
+              initial={{ x: 300, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              exit={{ x: -300, opacity: 0 }}
+              transition={{
+                type: "spring",
+                stiffness: 260,
+                damping: 20,
+              }}
+            >
+              {WebsiteData.about.desc}
+            </motion.p>
             <Link href={CV} className="button button--flex" download="">
               Download CV
               <svg

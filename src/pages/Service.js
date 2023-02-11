@@ -57,8 +57,11 @@ function Service() {
                     y: toggleState === item.id ? 0 : 50,
                   }}
                   initial={{ opacity: 0, y: 150 }}
-                  exit={{ opacity: 0, y: 150 }}
-                  transition={{ duration: 0.3 }}
+                  exit={{ opacity: toggleState === 0 ? 0 : 1, y: toggleState === 0 ? 50 : 0 }}
+                  transition={{
+                    duration: 0.3,
+                  }}
+              
                 >
                   <i
                     onClick={() => toggleTab(0)}

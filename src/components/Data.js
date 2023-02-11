@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import { motion } from "framer-motion";
 function Data(props) {
   let { title, content } = props;
   return (
@@ -57,10 +57,34 @@ function Data(props) {
           />
         </svg>
       </h1>
-      <h3 className="home__subtitle">Web Developer</h3>
-      <p className="home__description">{content}</p>
+      <motion.h3
+        className="home__subtitle"
+        initial={{ y: 200, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        exit={{ y: 20, opacity: 0 }}
+        transition={{
+          type: "spring",
+          stiffness: 260,
+          damping: 20,
+        }}
+      >
+        Web Developer
+      </motion.h3>
+      <motion.p
+        className="home__description"
+        initial={{ y: 20, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        exit={{ y: 20, opacity: 0 }}
+        transition={{
+          type: "spring",
+          stiffness: 260,
+          damping: 20,
+        }}
+      >
+        {content}
+      </motion.p>
 
-      <Link to={"/contact"}  className="button button--flex">
+      <Link to={"/contact"} className="button button--flex">
         Say Hello!{" "}
         <svg
           className="button__icon"

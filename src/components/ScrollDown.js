@@ -1,9 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import { motion } from "framer-motion";
 function ScrollDown() {
   return (
-    <div className="home__scroll">
+    <motion.div
+      className="home__scroll"
+      initial={{ y: 300, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      exit={{ y: -300, opacity: 0 }}
+      transition={{
+        type: "spring",
+        stiffness: 260,
+        damping: 20,
+      }}
+    >
       <Link to={""} className="home__scroll-button button--flex">
         <svg
           width="32px"
@@ -43,7 +53,7 @@ function ScrollDown() {
         <span className="home__scroll-name">Scroll down</span>
         <i className="uil uil-arrow-down home__scroll-arrow"></i>
       </Link>
-    </div>
+    </motion.div>
   );
 }
 

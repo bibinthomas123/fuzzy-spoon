@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import PText from "./PText.js";
+import { motion } from "framer-motion";
 
 const ItemStyles = styled.div`
   padding: 2rem;
@@ -37,13 +38,20 @@ const ItemStyles = styled.div`
 export default function ContactInfoItem({
   icon = <i className="bx bx-map bx-sm"></i>,
   text = "I need text ",
+  index
 }) {
   return (
-    <ItemStyles>
-      <div className="icon">{icon}</div>
-      <div className="info">
-        <PText>{text}</PText>
-      </div>
-    </ItemStyles>
+    <motion.div
+      initial={{ x: -100, opacity: 0 }}
+      animate={{ x: 0, opacity: 1 }}
+      transition={{ delay: index * 0.1 + 0.3 }}
+    >
+      <ItemStyles>
+        <div className="icon">{icon}</div>
+        <div className="info">
+          <PText>{text}</PText>
+        </div>
+      </ItemStyles>
+    </motion.div>
   );
 }

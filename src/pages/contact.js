@@ -59,16 +59,30 @@ const ContactSectionStyle = styled.div`
 `;
 
 export default function ContactSection() {
+  const items = [
+    {
+      icon: <i className="bx bx-phone-call bx-sm"></i>,
+      text: "+91 9121068352",
+    },
+    {
+      icon: <i className="bx bx-envelope bx-sm"></i>,
+      text: "bibinthomas951@gmail.com",
+    },
+    {
+      text: "Hyderabad, India",
+      icon: <i className="bx bx-map bx-sm"></i>,
+    },
+  ];
   return (
     <motion.div
-    initial={{ x: 300, opacity: 0 }}
-    animate={{ x: 0, opacity: 1 }}
-    exit={{ x:- 300, opacity: 0 }}
-    transition={{
-      type: "spring",
-      stiffness: 260,
-      damping: 20,
-    }}
+      initial={{ x: 300, opacity: 0 }}
+      animate={{ x: 0, opacity: 1 }}
+      exit={{ x: -300, opacity: 0 }}
+      transition={{
+        type: "spring",
+        stiffness: 260,
+        damping: 20,
+      }}
     >
       <ContactSectionStyle>
         <div className="contact__container contact">
@@ -76,15 +90,14 @@ export default function ContactSection() {
           <span className="section__subtitle">get in touch</span>
           <div className="contactSection__wrapper">
             <div className="left">
-              <ContactInfoItem
-                icon={<i className="bx bx-phone-call bx-sm"></i>}
-                text="+91 9121068352"
-              />
-              <ContactInfoItem
-                icon={<i className="bx bx-envelope bx-sm"></i>}
-                text="bibinthomas951@gmail.com"
-              />
-              <ContactInfoItem text="Hyderabad, India" />
+              {items.map((item, index) => (
+                <ContactInfoItem
+                  key={index}
+                  icon={item.icon}
+                  text={item.text}
+                  index={index}
+                />
+              ))}
             </div>
             <div className="right">
               <ContactForm />

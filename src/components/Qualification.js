@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-
+import { motion } from "framer-motion";
 function Qualification() {
   const [Toggle, setToggle] = useState(1);
 
@@ -9,7 +9,12 @@ function Qualification() {
   };
   return (
     <>
-      <section className="qualification section">
+      <motion.section
+        className="qualification section"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+      >
         <h2 className="section__title">Qualification</h2>
         <span className="section__subtitle">My Personal Journey</span>
 
@@ -187,7 +192,7 @@ function Qualification() {
             </div>
           </div>
         </div>
-      </section>
+      </motion.section>
     </>
   );
 }
