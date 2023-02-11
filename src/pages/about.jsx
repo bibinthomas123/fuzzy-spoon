@@ -12,14 +12,14 @@ import { motion } from "framer-motion";
 function About() {
   return (
     <motion.div
-    initial={{ x: 300, opacity: 0 }}
-    animate={{ x: 0, opacity: 1 }}
-    exit={{ x: 300, opacity: 0 }}
-    transition={{
-      type: "spring",
-      stiffness: 260,
-      damping: 20,
-    }}
+      initial={{ x: 300, opacity: 0 }}
+      animate={{ x: 0, opacity: 1 }}
+      exit={{ x: 300, opacity: 0 }}
+      transition={{
+        type: "spring",
+        stiffness: 260,
+        damping: 20,
+      }}
     >
       <section className="about section">
         <h2 className="section__title">About Me</h2>
@@ -35,7 +35,7 @@ function About() {
               Download CV
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="button__icon"
+                className="button__icon"
                 width="24"
                 height="24"
                 viewBox="0 0 24 24"

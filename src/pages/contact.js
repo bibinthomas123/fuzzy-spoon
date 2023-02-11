@@ -81,11 +81,11 @@ export default function ContactSection() {
           <div className="contactSection__wrapper">
             <div className="left">
               <ContactInfoItem
-                icon={<i class="bx bx-phone-call bx-sm"></i>}
+                icon={<i className="bx bx-phone-call bx-sm"></i>}
                 text="+91 9121068352"
               />
               <ContactInfoItem
-                icon={<i class="bx bx-envelope bx-sm"></i>}
+                icon={<i className="bx bx-envelope bx-sm"></i>}
                 text="bibinthomas951@gmail.com"
               />
               <ContactInfoItem text="Hyderabad, India" />

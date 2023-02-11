@@ -11,7 +11,7 @@ const ItemStyles = styled.div`
   gap: 2rem;
   border-radius: 8px;
   margin-bottom: 2rem;
-
+  overflow-x: visible;
   .icon {
     color: var(--white);
     background-color: var(--gray-2);
@@ -36,7 +36,7 @@ const ItemStyles = styled.div`
 `;
 
 export default function ContactInfoItem({
-  icon =<i className='bx bx-map bx-sm' ></i>,
+  icon = <i className="bx bx-map bx-sm"></i>,
   text = "I need text ",
 }) {
   return (

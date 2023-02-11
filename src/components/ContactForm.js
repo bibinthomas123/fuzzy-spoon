@@ -1,5 +1,8 @@
-import React, { useState } from 'react';
-import styled from 'styled-components';
+import React, { useState } from "react";
+import styled from "styled-components";
+import { Alert, AlertTitle } from "@mui/material";
+import emailjs, { init } from "@emailjs/browser";
+init("DTZtiAh1b05NZclpZ");
 
 const FormStyle = styled.form`
   width: 100%;
@@ -20,13 +23,13 @@ const FormStyle = styled.form`
     outline: none;
     border: none;
     border-radius: 8px;
-    margin-top: .5rem;
+    margin-top: 0.5rem;
   }
   textarea {
     min-height: 250px;
     resize: vertical;
   }
-  button[type='submit'] {
+  button[type="submit"] {
     background-color: var(--gray-1);
     color: var(--black);
     font-size: 1.5rem;
@@ -40,19 +43,65 @@ const FormStyle = styled.form`
 `;
 
 export default function ContactForm() {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [error, setError] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const sendEmail = async (e) => {
+    emailjs
+      .sendForm(
+        "service_y42skk7",
+        "template_xvn4grd",
+        e.target,
+        "DTZtiAh1b05NZclpZ"
+      )
+      .then(
+        (result) => {
+          setError(false);
+        },
+        (error) => {
+          setError(true);
+        }
+      );
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    sendEmail(e);
+    setSuccess(true);
+
+    setName("");
+    setEmail("");
+    setMessage("");
+  };
+
   return (
     <>
-      <FormStyle>
+      {success ? (
+        <>
+          {error ? (
+            <Alert severity="error">
+              <AlertTitle>Error</AlertTitle>
+              Something went wrong
+            </Alert>
+          ) : (
+            <Alert severity="success">
+              <AlertTitle>Success</AlertTitle>
+              Your message has been sent
+            </Alert>
+          )}
+        </>
+      ) : null}
+
+      <FormStyle onSubmit={handleSubmit}>
         <div className="form-group">
           <label htmlFor="name">
             Your Name
             <input
               type="text"
               id="name"
-              name="name"
+              name="user_name"
               value={name}
               onChange={(e) => setName(e.target.value)}
             />
@@ -64,7 +113,7 @@ export default function ContactForm() {
             <input
               type="email"
               id="email"
-              name="email"
+              name="user_email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
