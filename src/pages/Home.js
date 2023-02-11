@@ -7,14 +7,14 @@ import WebsiteData from "../data/content.js";
 function Home() {
   return (
     <motion.div
-    initial={{ x: 300, opacity: 0 }}
-    animate={{ x: 0, opacity: 1 }}
-    exit={{ x: 300, opacity: 0 }}
-    transition={{
-      type: "spring",
-      stiffness: 260,
-      damping: 20,
-    }}
+      initial={{ x: 300, opacity: 0 }}
+      animate={{ x: 0, opacity: 1 }}
+      exit={{ x: 300, opacity: 0 }}
+      transition={{
+        type: "spring",
+        stiffness: 260,
+        damping: 20,
+      }}
     >
       <section className="home section" id="home">
         <div className="home__container container grid">
