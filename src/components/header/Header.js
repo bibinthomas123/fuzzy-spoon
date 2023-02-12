@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { NavLink } from "react-router-dom";
 import "./header.css";
 
 function Header() {
@@ -8,40 +8,70 @@ function Header() {
   return (
     <header className="header">
       <nav className="nav container">
-        <Link to={"/"} className="nav__logo">
+        <NavLink to={"/"} className="nav__logo">
           Bibin Thomas
-        </Link>
+        </NavLink>
         <div className={Toggle ? "nav__menu show-menu" : "nav__menu"}>
           <ul className="nav__list grid">
             <li className="nav__item">
-              <Link to={"/"} className="nav__link active-link">
+              <NavLink
+                to={"/"}
+                className={({ isActive }) => {
+                  return isActive ? "nav__link active-link" : "nav__link";
+                }}
+              >
                 <i className="uil uil-estate nav__icon" /> Home
-              </Link>
+              </NavLink>
             </li>
             <li className="nav__item">
-              <Link to={"/about"} className="nav__link">
+              <NavLink
+                to={"/about"}
+                className={({ isActive }) => {
+                  return isActive ? "nav__link active-link" : "nav__link";
+                }}
+              >
                 <i className="uil uil-user nav__icon" /> About
-              </Link>
+              </NavLink>
             </li>
             <li className="nav__item">
-              <Link to={"/skills"} className="nav__link">
+              <NavLink
+                to={"/skills"}
+                className={({ isActive }) => {
+                  return isActive ? "nav__link active-link" : "nav__link";
+                }}
+              >
                 <i className="uil uil-desktop-alt nav__icon" /> Skills
-              </Link>
+              </NavLink>
             </li>
             <li className="nav__item">
-              <Link to={"/service"} className="nav__link">
+              <NavLink
+                to={"/service"}
+                className={({ isActive }) => {
+                  return isActive ? "nav__link active-link" : "nav__link";
+                }}
+              >
                 <i className="uil uil-briefcase-alt nav__icon" /> Services
-              </Link>
+              </NavLink>
             </li>
             <li className="nav__item">
-              <Link to={"/portfolio"} className="nav__link">
+              <NavLink
+                to={"/portfolio"}
+                className={({ isActive }) => {
+                  return isActive ? "nav__link active-link" : "nav__link";
+                }}
+              >
                 <i className="uil uil-scenery nav__icon" /> portfolio
-              </Link>
+              </NavLink>
             </li>
             <li className="nav__item">
-              <Link to={"/contact"} className="nav__link">
+              <NavLink
+                to={"/contact"}
+                className={({ isActive }) => {
+                  return isActive ? "nav__link active-link" : "nav__link";
+                }}
+              >
                 <i className="uil uil-message nav__icon" /> Contact
-              </Link>
+              </NavLink>
             </li>
           </ul>
 

@@ -11,9 +11,9 @@ function Service() {
   const data = WebsiteData.services;
   return (
     <motion.div
-      initial={{ x: 300, opacity: 0 }}
+      initial={{ x: 150, opacity: 0 }}
       animate={{ x: 0, opacity: 1 }}
-      exit={{ x: -300, opacity: 0 }}
+      exit={{ x: -150, opacity: 0 }}
       transition={{
         type: "spring",
         stiffness: 260,
@@ -43,12 +43,21 @@ function Service() {
                 <i className="uil uil-arrow-right services__button-icon"></i>
               </span>
 
-              <section
+              <motion.section
                 className={
                   toggleState === item.id
                     ? "services__modal active-modal"
                     : "services__modal"
                 }
+                animate={{
+                  opacity: toggleState === item.id ? 1 : 0,
+                  y: toggleState === item.id ? 0 : 50,
+                }}
+                initial={{ opacity: 0, y: 150 }}
+                exit={{ opacity: 0, y: 50 }}
+                transition={{
+                  duration: 0.3,
+                }}
               >
                 <motion.div
                   className="services__modal-content"
@@ -57,11 +66,10 @@ function Service() {
                     y: toggleState === item.id ? 0 : 50,
                   }}
                   initial={{ opacity: 0, y: 150 }}
-                  exit={{ opacity: toggleState === 0 ? 0 : 1, y: toggleState === 0 ? 50 : 0 }}
+                  exit={{ opacity: 0, y: 50 }}
                   transition={{
                     duration: 0.3,
                   }}
-              
                 >
                   <i
                     onClick={() => toggleTab(0)}
@@ -76,7 +84,7 @@ function Service() {
                     </li>
                   </ul>
                 </motion.div>
-              </section>
+              </motion.section>
             </div>
           ))}
         </div>

@@ -1,7 +1,9 @@
 import React from "react";
 import { useState } from "react";
 import { motion } from "framer-motion";
-function Qualification() {
+
+function Qualification(props) {
+  let { data } = props;
   const [Toggle, setToggle] = useState(1);
 
   const toggleTab = (index) => {
@@ -54,68 +56,47 @@ function Qualification() {
                   : "qualification__content"
               }
             >
-              <div className="qualification__data">
-                <div>
-                  <h3 className="qualification__title">Web Design</h3>
-                  <span className="qualification__subtitle">
-                    Spain-Institute{" "}
-                  </span>
-                  <div className="qualification__calender">
-                    <i className="uil uil-calender"></i> 2021 - present
-                  </div>
+              {data.education.map((item, index) => (
+                <div key={index}>
+                  {index % 2 != 0 ? (
+                    <div className="qualification__data">
+                      <div>
+                        <h3 className="qualification__title">{item.name}</h3>
+                        <span className="qualification__subtitle">
+                          {item.subtitle}
+                        </span>
+                        <div className="qualification__calender">
+                          <i className="uil uil-calender"></i> {item.year}
+                        </div>
+                      </div>
+                      <div>
+                        <span className="qualification__rounder"></span>
+                        <div className="qualification__line"></div>
+                      </div>
+                    </div>
+                  ) : (
+                    <>
+                      {" "}
+                      <div className="qualification__data">
+                        <div></div>
+                        <div>
+                          <span className="qualification__rounder"></span>
+                          <div className="qualification__line"></div>
+                        </div>
+                        <div>
+                          <h3 className="qualification__title">{item.name}</h3>
+                          <span className="qualification__subtitle">
+                            {item.subtitle}
+                          </span>
+                          <div className="qualification__calender">
+                            <i className="uil uil-calender"></i> {item.year}
+                          </div>
+                        </div>
+                      </div>
+                    </>
+                  )}
                 </div>
-                <div>
-                  <span className="qualification__rounder"></span>
-                  <div className="qualification__line"></div>
-                </div>
-              </div>
-              <div className="qualification__data">
-                <div></div>
-                <div>
-                  <span className="qualification__rounder"></span>
-                  <div className="qualification__line"></div>
-                </div>
-                <div>
-                  <h3 className="qualification__title">Web Design</h3>
-                  <span className="qualification__subtitle">
-                    Spain-Institute{" "}
-                  </span>
-                  <div className="qualification__calender">
-                    <i className="uil uil-calender"></i> 2021 - present
-                  </div>
-                </div>
-              </div>
-              <div className="qualification__data">
-                <div>
-                  <h3 className="qualification__title">Web Design</h3>
-                  <span className="qualification__subtitle">
-                    Spain-Institute{" "}
-                  </span>
-                  <div className="qualification__calender">
-                    <i className="uil uil-calender"></i> 2021 - present
-                  </div>
-                </div>
-                <div>
-                  <span className="qualification__rounder"></span>
-                  <div className="qualification__line"></div>
-                </div>
-              </div>
-              <div className="qualification__data">
-                <div></div>
-                <div>
-                  <span className="qualification__rounder"></span>
-                  <div className="qualification__line"></div>
-                </div>
-                <div>
-                  <h3 className="qualification__title">Web Design</h3>
-                  <span className="qualification__subtitle">
-                    Spain-Institute{" "}
-                  </span>
-                  <div className="qualification__calender">
-                    <i className="uil uil-calender"></i> 2021 - present
-                  </div>
-                </div>
-              </div>
+              ))}
             </div>
 
             {/* section2 */}
@@ -126,69 +107,47 @@ function Qualification() {
                   : "qualification__content"
               }
             >
-              <div className="qualification__data">
-                <div></div>
-                <div>
-                  <span className="qualification__rounder"></span>
-                  <div className="qualification__line"></div>
+              {data.experience.map((item, index) => (
+                <div key={index}>
+                  {index % 2 != 0 ? (
+                    <div className="qualification__data">
+                      <div>
+                        <h3 className="qualification__title">{item.name}</h3>
+                        <span className="qualification__subtitle">
+                          {item.subtitle}
+                        </span>
+                        <div className="qualification__calender">
+                          <i className="uil uil-calender"></i> {item.year}
+                        </div>
+                      </div>
+                      <div>
+                        <span className="qualification__rounder"></span>
+                        <div className="qualification__line"></div>
+                      </div>
+                    </div>
+                  ) : (
+                    <>
+                      {" "}
+                      <div className="qualification__data">
+                        <div></div>
+                        <div>
+                          <span className="qualification__rounder"></span>
+                          <div className="qualification__line"></div>
+                        </div>
+                        <div>
+                          <h3 className="qualification__title">{item.name}</h3>
+                          <span className="qualification__subtitle">
+                            {item.subtitle}
+                          </span>
+                          <div className="qualification__calender">
+                            <i className="uil uil-calender"></i> {item.year}
+                          </div>
+                        </div>
+                      </div>
+                    </>
+                  )}
                 </div>
-                <div>
-                  <h3 className="qualification__title">Web Design</h3>
-                  <span className="qualification__subtitle">
-                    Spain-Institute{" "}
-                  </span>
-                  <div className="qualification__calender">
-                    <i className="uil uil-calender"></i> 2021 - present
-                  </div>
-                </div>
-              </div>
-              <div className="qualification__data">
-                <div>
-                  <h3 className="qualification__title">rgrgr Design</h3>
-                  <span className="qualification__subtitle">
-                    Spain-Institute{" "}
-                  </span>
-                  <div className="qualification__calender">
-                    <i className="uil uil-calender"></i> 2021 - present
-                  </div>
-                </div>
-                <div>
-                  <span className="qualification__rounder"></span>
-                  <div className="qualification__line"></div>
-                </div>
-              </div>
-
-              <div className="qualification__data">
-                <div></div>
-                <div>
-                  <span className="qualification__rounder"></span>
-                  <div className="qualification__line"></div>
-                </div>
-                <div>
-                  <h3 className="qualification__title">Web Design</h3>
-                  <span className="qualification__subtitle">
-                    Spain-Institute{" "}
-                  </span>
-                  <div className="qualification__calender">
-                    <i className="uil uil-calender"></i> 2021 - present
-                  </div>
-                </div>
-              </div>
-              <div className="qualification__data">
-                <div>
-                  <h3 className="qualification__title">Web Design</h3>
-                  <span className="qualification__subtitle">
-                    Spain-Institute{" "}
-                  </span>
-                  <div className="qualification__calender">
-                    <i className="uil uil-calender"></i> 2021 - present
-                  </div>
-                </div>
-                <div>
-                  <span className="qualification__rounder"></span>
-                  <div className="qualification__line"></div>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>

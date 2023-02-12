@@ -66,9 +66,9 @@ export default function Projects() {
   };
   return (
     <motion.div
-      initial={{ x: 300, opacity: 0 }}
+      initial={{ x: 150, opacity: 0 }}
       animate={{ x: 0, opacity: 1 }}
-      exit={{ x: -300, opacity: 0 }}
+      exit={{ x: -150, opacity: 0 }}
       transition={{
         type: "spring",
         stiffness: 260,
@@ -78,9 +78,9 @@ export default function Projects() {
       <ProjectStyle>
         <motion.div
           className="container"
-          initial={{ y: 300, opacity: 0 }}
+          initial={{ y: 150, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          exit={{ y: -300, opacity: 0 }}
+          exit={{ y: -150, opacity: 0 }}
           transition={{
             type: "spring",
             stiffness: 260,
@@ -89,9 +89,9 @@ export default function Projects() {
         >
           <motion.h2
             className="section__title"
-            initial={{ x: -300, opacity: 0 }}
+            initial={{ x: -150, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
-            exit={{ x: 300, opacity: 0 }}
+            exit={{ x: 150, opacity: 0 }}
             transition={{
               type: "spring",
               stiffness: 260,
@@ -102,9 +102,9 @@ export default function Projects() {
           </motion.h2>
           <motion.span
             className="section__subtitle"
-            initial={{ x: 300, opacity: 0 }}
+            initial={{ x: 150, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
-            exit={{ x: -300, opacity: 0 }}
+            exit={{ x: -150, opacity: 0 }}
             transition={{
               type: "spring",
               stiffness: 260,
@@ -115,9 +115,9 @@ export default function Projects() {
           </motion.span>
           <motion.div
             className="projects__searchBar"
-            initial={{ y: 300, opacity: 0 }}
+            initial={{ y: 150, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            exit={{ y: -300, opacity: 0 }}
+            exit={{ y: -150, opacity: 0 }}
             transition={{
               type: "spring",
               stiffness: 260,
@@ -130,9 +130,9 @@ export default function Projects() {
                 value={searchText}
                 onChange={handleChange}
                 placeholder="Project Name"
-                initial={{ x: 300, opacity: 0 }}
+                initial={{ x: 150, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
-                exit={{ x: -300, opacity: 0 }}
+                exit={{ x: -150, opacity: 0 }}
                 transition={{
                   type: "spring",
                   stiffness: 260,
@@ -141,9 +141,9 @@ export default function Projects() {
               />
               <motion.i
                 className="bx bx-search searchIcon"
-                initial={{ x: -300, opacity: 0 }}
+                initial={{ x: -150, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
-                exit={{ x: 300, opacity: 0 }}
+                exit={{ x: 150, opacity: 0 }}
                 transition={{
                   type: "spring",
                   stiffness: 260,

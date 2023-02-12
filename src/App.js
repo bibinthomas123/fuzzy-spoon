@@ -10,7 +10,7 @@ import Projects from "./pages/Projects";
 import Contact from "./pages/contact";
 import { AnimatePresence } from "framer-motion";
 import Preloader from "./components/Preloader";
-import PageNotFound from "./components/PageNotFound";    
+import PageNotFound from "./components/PageNotFound";
 
 function App() {
   const location = useLocation();
@@ -18,7 +18,7 @@ function App() {
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
-    }, 5000);
+    }, 3500);
   }, []);
   if (isLoading) {
     return <Preloader />;

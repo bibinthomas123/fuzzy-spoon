@@ -47,6 +47,33 @@ const WebsiteData = {
         ),
       },
     ],
+
+    qualifications: {
+      education: [
+        {
+          name: "Mount Carmel H.S",
+          subtitle: "Schooling",
+          year: "2006 - 2018",
+        },
+        {
+          name: "Sri Gayathri Junior College",
+          subtitle: "Intermediate",
+          year: "2018 - 2020",
+        },
+        {
+          name: "Loyola Academy",
+          subtitle: "B.Sc Computer Science",
+          year: "2021 - present",
+        },
+      ],
+      experience: [
+        {
+          name: "Whizoid Studio",
+          subtitle: "Internship",
+          year: "2021 - present",
+        },
+      ],
+    },
   },
   skills: {
     title: "Skills",

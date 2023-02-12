@@ -5,9 +5,9 @@ function Skills() {
   return (
     <motion.section
       className="skills section"
-      initial={{ x: 300, opacity: 0 }}
+      initial={{ x: 150, opacity: 0 }}
       animate={{ x: 0, opacity: 1 }}
-      exit={{ x:- 300, opacity: 0 }}
+      exit={{ x: -150, opacity: 0 }}
       transition={{
         type: "spring",
         stiffness: 260,

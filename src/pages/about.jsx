@@ -12,9 +12,9 @@ import { motion } from "framer-motion";
 function About() {
   return (
     <motion.div
-      initial={{ x: 300, opacity: 0 }}
+      initial={{ x: 150, opacity: 0 }}
       animate={{ x: 0, opacity: 1 }}
-      exit={{ x: -300, opacity: 0 }}
+      exit={{ x: -150, opacity: 0 }}
       transition={{
         type: "spring",
         stiffness: 260,
@@ -24,9 +24,9 @@ function About() {
       <section className="about section">
         <motion.h2
           className="section__title"
-          initial={{ x: 300, opacity: 0 }}
+          initial={{ x: 150, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
-          exit={{ x: -300, opacity: 0 }}
+          exit={{ x: -150, opacity: 0 }}
           transition={{
             type: "spring",
             stiffness: 260,
@@ -37,9 +37,9 @@ function About() {
         </motion.h2>
         <motion.span
           className="section__subtitle"
-          initial={{ x: 300, opacity: 0 }}
+          initial={{ x: 150, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
-          exit={{ x: -300, opacity: 0 }}
+          exit={{ x: -150, opacity: 0 }}
           transition={{
             type: "spring",
             stiffness: 260,
@@ -54,9 +54,9 @@ function About() {
             src={AboutImg}
             alt=""
             className="about__img"
-            initial={{ x: 300, opacity: 0 }}
+            initial={{ x: 150, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
-            exit={{ x: -300, opacity: 0 }}
+            exit={{ x: -150, opacity: 0 }}
             transition={{
               type: "spring",
               stiffness: 260,
@@ -68,9 +68,9 @@ function About() {
             <Info data={WebsiteData.about.cardDetails} />
             <motion.p
               className="about__description"
-              initial={{ x: 300, opacity: 0 }}
+              initial={{ x: 150, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
-              exit={{ x: -300, opacity: 0 }}
+              exit={{ x: -150, opacity: 0 }}
               transition={{
                 type: "spring",
                 stiffness: 260,
@@ -79,11 +79,17 @@ function About() {
             >
               {WebsiteData.about.desc}
             </motion.p>
-            <Link href={CV} className="button button--flex" download="">
+            <motion.a
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              href={CV}
+              className="button button--flex"
+              download=""
+            >
               Download CV
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="button__icon"
+                className="button__icon"
                 width="24"
                 height="24"
                 viewBox="0 0 24 24"
@@ -106,14 +112,14 @@ function About() {
                   fill="var(--container-color)"
                 />
               </svg>
-            </Link>
+            </motion.a>
           </div>
         </div>
       </section>
       <div className="about__scroll">
         <ScrollDown />
       </div>
-      <Qualification />
+      <Qualification data={WebsiteData.about.qualifications} />
     </motion.div>
   );
 }
