@@ -6,7 +6,6 @@ import Info from "../components/Info";
 import WebsiteData from "../data/content";
 import ScrollDown from "../components/ScrollDown";
 import Qualification from "../components/Qualification";
-import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 function About() {

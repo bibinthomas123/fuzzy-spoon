@@ -58,7 +58,7 @@ function Qualification(props) {
             >
               {data.education.map((item, index) => (
                 <div key={index}>
-                  {index % 2 != 0 ? (
+                  {index % 2 !== 0 ? (
                     <div className="qualification__data">
                       <div>
                         <h3 className="qualification__title">{item.name}</h3>
@@ -109,7 +109,7 @@ function Qualification(props) {
             >
               {data.experience.map((item, index) => (
                 <div key={index}>
-                  {index % 2 != 0 ? (
+                  {index % 2 !== 0 ? (
                     <div className="qualification__data">
                       <div>
                         <h3 className="qualification__title">{item.name}</h3>
