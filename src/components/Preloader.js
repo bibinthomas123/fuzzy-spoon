@@ -24,10 +24,11 @@ const Preloader = () => {
         transform: "translate(-50%, -50%)",
         display: "flex",
         justifyContent: "center",
-        fontSize: "20px", 
+        fontSize: "20px",
         alignItems: "center",
         opacity: 0,
         zIndex: 999,
+        color: "#000000",
       }}
     >
       <div className="spinner">Bibin Thomas</div>
