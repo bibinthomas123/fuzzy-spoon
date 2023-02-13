@@ -13,6 +13,9 @@ function Shape() {
   const texture = new THREE.TextureLoader().load(
     "https://bruno-simon.com/prismic/matcaps/8.png"
   );
+  texture.wrapS = THREE.RepeatWrapping;
+  texture.wrapT = THREE.RepeatWrapping;
+  texture.repeat.set(3,3);
 
   return (
     <>
