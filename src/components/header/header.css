@@ -35,8 +35,7 @@
   font-size: var(--font-medium);
   color: var(--title-color);
   font-weight: var(--font-medium);
-  transition: 2s ease-in-out;
-}
+  transition: 0.3s;}
 
 .nav__icon,
 .nav__close,
