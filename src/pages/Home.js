@@ -6,7 +6,7 @@ import WebsiteData from "../data/content.js";
 import { Canvas } from "@react-three/fiber";
 import Shape from "../components/Shape";
 import styled from "styled-components";
-import MusicPlayer from "../components/Music";
+import LocomotiveScrollContainer from "../components/Strip";
 
 const Styles = styled.div`
   canvas {
@@ -19,7 +19,7 @@ function Home() {
     <Styles>
       <motion.div
         className="box"
-        initial={{ y: -150, opacity: 0 }}
+        initial={{ y: -300, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         exit={{ y: 150, opacity: 0 }}
         transition={{
@@ -27,7 +27,9 @@ function Home() {
           stiffness: 260,
           damping: 20,
         }}
-      ><MusicPlayer/></motion.div>
+      >
+        {/* <LocomotiveScrollContainer /> */}
+      </motion.div>
       <motion.div
         initial={{ y: 150, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}

@@ -13,6 +13,7 @@ const FormStyle = styled.form`
   }
   label {
     font-size: 1.5rem;
+    color: var(--subtitle-color);
   }
   input,
   textarea {

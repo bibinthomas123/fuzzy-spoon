@@ -28,7 +28,7 @@ const Preloader = () => {
         alignItems: "center",
         opacity: 0,
         zIndex: 999,
-        color: "#000000",
+        color: "#ffffff",
       }}
     >
       <div className="spinner">Bibin Thomas</div>

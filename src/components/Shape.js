@@ -15,14 +15,14 @@ function Shape() {
   );
   texture.wrapS = THREE.RepeatWrapping;
   texture.wrapT = THREE.RepeatWrapping;
-  texture.repeat.set(3,3);
+  texture.repeat.set(4, 4);
 
   return (
     <>
       <perspectiveCamera />
       <mesh ref={meshRef}>
         <ambientLight intensity={1} />
-        <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
+        <spotLight position={[10, 10, 10]} angle={1} penumbra={1} />
         <torusKnotGeometry attach="geometry" args={[1.7, 0.6, 150, 40]} />
         <meshBasicMaterial attach="material" map={texture} />
         <OrbitControls enableZoom={false} />

@@ -9,13 +9,15 @@
   /*Color mode HSL(hue, saturation, lightness)*/
   --hue: 0;
   --sat: 0%;
-  --title-color: hsl(var(--hue), var(--sat), 10%);
+  --title-color: hsl(var(--hue), var(--sat), 80%);
   --title-color-dark: hsl(var(--hue), var(--sat), 0%);
   --title-color-white: hsl(var(--hue), var(--sat), 100%);
+  --subtitle-color: hsl(var(--hue), var(--sat), 60%);
+  --description-color: hsl(var(--hue), var(--sat), 70%);
   --text-color: hsl(var(--hue), var(--sat), 10%);
-  --body-color: #efefef;
+  --body-color: #000000;
   --container-color: #f9f9f9;
-  --container-color-dark: #242424;
+  --container-color-dark: #101010;
 
   --dark-bg: #ffffff;
   --gray-1: #bcb4b4;
@@ -24,7 +26,7 @@
   --deep-dark2: #2d2d2d;
   --gray-2: #2c2c2c;
   --white: var(--body-color);
-  --white-2: #b6b2b2;
+  --white-2: #3c3c3c;
   --black: black;
 
   /*========== Font and typography ==========*/
@@ -147,6 +149,7 @@ img {
   width: 100%;
   height: 25%;
   background-color: var(--container-color-dark);
+  overflow: hidden;
 }
 /*=============== REUSABLE CSS CLASSES ===============*/
 .section {
@@ -162,6 +165,7 @@ img {
   display: block;
   font-size: var(--small-font-size);
   margin-bottom: 4rem;
+  color: var(--subtitle-color);
 }
 
 .section__title,
@@ -185,18 +189,20 @@ img {
 .button {
   display: inline-block;
   background-color: var(--title-color);
-  color: var(--title-color-white);
+  color: var(--black);
+  filter: invert(1);
   padding: 1.25rem 2rem;
   border-radius: 1rem;
   font-weight: var(--font-medium);
 }
 
 .button:hover {
-  background-color: var(--title-color-dark);
+  background-color: var(--subtitle-color);
 }
 
 .button__icon {
   margin-left: var(--mb-0-5);
+  filter: invert(1);
 }
 
 .button--flex {
@@ -294,15 +300,19 @@ img {
 .about__title {
   font-size: var(--small-font-size);
   font-weight: var(--font-medium);
+  color: var(--title-color);
+  filter: invert(1);
 }
 
 .about__subtitle {
   font-size: var(--tiny-font-size);
+  color: var(--subtitle-color);
 }
 
 .about__description {
   padding: 0 0 0 0;
   margin-bottom: var(--mb-2-5);
+  color: var(--description-color);
 }
 
 /* breakpoint */
@@ -387,6 +397,7 @@ img {
 }
 .home__social-icon:hover {
   color: var(--title-color-dark);
+  filter: invert(1);
 }
 
 .home__title {
@@ -394,14 +405,11 @@ img {
   margin-bottom: var(--mb-0-25);
 }
 .home__img {
-  /* background: url(/src/assests/profile.jpg) no-repeat center;
-  background-size: cover; */
   box-shadow: inset -20px 0px 20px 20px rgb(0 0 0 / 30%);
   order: 1;
   justify-self: center;
   width: 300px;
   height: 300px;
-  /* animation: profile__animate 8s ease-in-out infinite 1s; */
 }
 
 .home__subtitle::before {
@@ -409,7 +417,7 @@ img {
   position: absolute;
   width: 70px;
   height: 1px;
-  background-color: var(--text-color);
+  background-color: var(--title-color);
   left: 0;
   top: 1rem;
 }
@@ -417,6 +425,7 @@ img {
 .home__description {
   max-width: 400px;
   margin-bottom: var(--mb-3);
+  color: var(--description-color);
 }
 
 @keyframes profile__animate {
@@ -564,6 +573,8 @@ img {
   font-weight: var(--font-medium);
   margin-bottom: var(--mb-1-5);
   text-align: center;
+  color: var(--title-color);
+  filter: invert(1);
 }
 
 .skills__box {
@@ -582,6 +593,10 @@ img {
   display: flex;
   column-gap: 0.5rem;
 }
+.bx-badge-check {
+  color: var(--title-color);
+  filter: invert(1);
+}
 
 .skills,
 .bx-badge-check {
@@ -592,12 +607,15 @@ img {
 .skills__name {
   font-size: var(--normal-font-size);
   font-weight: var(--font-medium);
+  color: var(--title-color);
+  filter: invert(1);
   list-style: 18px;
 }
 
 .skills_level {
   font-size: var(--small-font-size);
-  color: var(--text-color);
+  color: var(--subtitle-color);
+  filter: invert(1);
 }
 
 /*=============== BREAKPOINTS ===============*/
@@ -651,7 +669,7 @@ img {
 .services__icon {
   display: block;
   font-size: 2rem;
-  color: var(--title-color);
+  color: var(--white);
   margin-bottom: var(--mb-1);
 }
 
@@ -659,9 +677,10 @@ img {
   font-size: var(--h3-font-size);
   margin-bottom: var(--mb-1);
   font-weight: var(--font-medium);
+  color: var(--white);
 }
 .services__button {
-  color: var(--title-color);
+  color: var(--white);
   font-size: var(--small-font-size);
   display: inline-flex;
   align-items: center;
@@ -672,6 +691,7 @@ img {
 .services__button-icon {
   font-size: 1.25rem;
   transition: 0.3s;
+  color: var(--white);
 }
 
 .services__button:hover .services__button-icon {
@@ -725,6 +745,7 @@ img {
 .services__modal-title {
   font-size: var(--h3-font-size);
   font-weight: var(--font-medium);
+  color: var(--white-2);
   margin-bottom: var(--mb-1);
 }
 
@@ -732,6 +753,7 @@ img {
   font-size: var(--small-font-size);
   padding: 0 3.5rem;
   margin-bottom: var(--mb-2);
+  color: var(--subtitle-color);
 }
 
 .services__modal-services {
@@ -827,10 +849,11 @@ img {
   color: var(--title-color);
   margin: 0 var(--mb-1);
   cursor: pointer;
+  transition: 0.5s ease-in-out;
 }
 
 .qualification__button:hover {
-  color: var(--title-color-dark);
+  color: var(--white-2);
 }
 
 .qualification__icon {
@@ -839,7 +862,7 @@ img {
 }
 
 .qualification__active {
-  color: var(--title-color-dark);
+  color: var(--subtitle-color);
 }
 
 .qualification__sections {
@@ -870,18 +893,21 @@ img {
 .qualification__subtitle {
   display: inline-block;
   font-size: var(--small-font-size);
+  color: var(--subtitle-color);
   margin-bottom: var(--mb-1);
 }
 
 .qualification__calender {
   font-size: var(--small-font-size);
+  color: var(--subtitle-color);
 }
 
 .qualification__rounder {
   display: inline-block;
   width: 13px;
   height: 13px;
-  background-color: var(--text-color);
+  background-color: var(--white);
+  filter: invert(1);
   border-radius: 50%;
 }
 
@@ -889,7 +915,8 @@ img {
   display: block;
   width: 1px;
   height: 100%;
-  background-color: var(--text-color);
+  background-color: var(--white);
+  filter: invert(1);
   transform: translate(6px, -7px);
 }
 
@@ -1095,4 +1122,18 @@ body.active-modal {
   width: 90%;
   margin: 0 auto;
   font-size: 10px;
+}
+.strip {
+  display: flex;
+  flex-direction: row;
+  white-space: nowrap;
+}
+
+.strip__item {
+  display: inline-block;
+  margin-right: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }

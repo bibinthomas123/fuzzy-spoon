@@ -13,7 +13,7 @@ const ItemStyles = styled.div`
   margin-bottom: 2rem;
   overflow-x: visible;
   .icon {
-    color: var(--white);
+    color: var(--subtitle-color);
     background-color: var(--gray-2);
 
     display: flex;
@@ -38,7 +38,7 @@ const ItemStyles = styled.div`
 export default function ContactInfoItem({
   icon = <i className="bx bx-map bx-sm"></i>,
   text = "I need text ",
-  index
+  index,
 }) {
   return (
     <motion.div

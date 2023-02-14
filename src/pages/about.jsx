@@ -79,8 +79,6 @@ function About() {
               {WebsiteData.about.desc}
             </motion.p>
             <motion.a
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
               href={CV}
               className="button button--flex"
               download=""
