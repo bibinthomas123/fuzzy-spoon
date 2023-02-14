@@ -6,7 +6,7 @@ import WebsiteData from "../data/content.js";
 import { Canvas } from "@react-three/fiber";
 import Shape from "../components/Shape";
 import styled from "styled-components";
-import LocomotiveScrollContainer from "../components/Strip";
+// import LocomotiveScrollContainer from "../components/Strip";
 
 const Styles = styled.div`
   canvas {
