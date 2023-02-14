@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import * as THREE from "three";
-import Wave from "./Wave";
+// import Wave from "./Wave";
 
 const MusicPlayer = () => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -39,8 +39,8 @@ const MusicPlayer = () => {
 
   return (
     <div>
-      <button onClick={handlePlayPause}>
-        {isPlaying ? <Wave amplitude={10} /> : "Play"}
+      <button className="music" onClick={handlePlayPause}>
+        {isPlaying ? "Pause" : "Play"}
       </button>
     </div>
   );

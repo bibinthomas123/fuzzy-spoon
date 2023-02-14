@@ -1,17 +1,17 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./header.css";
-
+import MusicPlayer from "../Music";
 function Header() {
   const [Toggle, showMenu] = useState(false);
 
   return (
     <header className="header">
       <nav className="nav container">
-        <NavLink to={"/"} className="nav__logo">
+        {/* <NavLink to={"/"} className="nav__logo">
           Bibin Thomas
-        </NavLink>
-        {/* <MusicPlayer/> */}
+        </NavLink> */}
+        <MusicPlayer/>
         <div className={Toggle ? "nav__menu show-menu" : "nav__menu"}>
           <ul className="nav__list grid">
             <li className="nav__item">
