@@ -6,7 +6,7 @@ import WebsiteData from "../data/content.js";
 import { Canvas } from "@react-three/fiber";
 import Shape from "../components/Shape";
 import styled from "styled-components";
-
+import MusicPlayer from "../components/Music";
 
 const Styles = styled.div`
   canvas {
@@ -27,7 +27,7 @@ function Home() {
           stiffness: 260,
           damping: 20,
         }}
-      ></motion.div>
+      ><MusicPlayer/></motion.div>
       <motion.div
         initial={{ y: 150, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
