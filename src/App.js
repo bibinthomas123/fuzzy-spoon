@@ -15,6 +15,7 @@ import PageNotFound from "./components/PageNotFound";
 function App() {
   const location = useLocation();
   const [isLoading, setIsLoading] = useState(true);
+  
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
