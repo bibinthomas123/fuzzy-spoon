@@ -1,5 +1,4 @@
 import React from "react";
-// import "./about.css";
 import AboutImg from "../assests/profile.jpg";
 import CV from "../assests/Bibinsresume.pdf";
 import Info from "../components/Info";
@@ -78,11 +77,7 @@ function About() {
             >
               {WebsiteData.about.desc}
             </motion.p>
-            <motion.a
-              href={CV}
-              className="button button--flex"
-              download=""
-            >
+            <motion.a href={CV} className="button button--flex" download="">
               Download CV
               <svg
                 xmlns="http://www.w3.org/2000/svg"

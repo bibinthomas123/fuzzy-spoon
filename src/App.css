@@ -1,5 +1,16 @@
-/*=============== GOOGLE FONTS ===============*/
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+/*===============  FONTS ===============*/
+
+@font-face {
+  font-family: "poppins"; /*Can be any text*/
+  src: local("poppins"),
+    url("./components/fonts/Poppins-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Abril";
+  src: local("Abril"),
+    url("./components/fonts/AbrilFatface-Regular.ttf") format("truetype");
+}
 
 /*=============== VARIABLES CSS ===============*/
 :root {
@@ -31,7 +42,7 @@
   --black: black;
 
   /*========== Font and typography ==========*/
-  --body-font: "Poppins", sans-serif;
+  --body-font: "poppins", sans-serif;
 
   /*.5rem = 8px | 1rem = 16px ...*/
   --big-font-size: 3.5rem;
@@ -119,6 +130,8 @@ a {
   text-decoration: none;
 }
 
+
+
 button {
   cursor: pointer;
   border: none;
@@ -160,6 +173,7 @@ img {
 .section__title {
   font-size: var(--h1-font-size);
   color: var(--title-color);
+  font-family: Abril, sans-serif;
 }
 
 .section__subtitle {
@@ -405,6 +419,7 @@ img {
 .home__title {
   font-size: var(--big-font-size);
   margin-bottom: var(--mb-0-25);
+  font-family: Abril, sans-serif;
 }
 .home__img {
   box-shadow: inset -20px 0px 20px 20px rgb(0 0 0 / 30%);

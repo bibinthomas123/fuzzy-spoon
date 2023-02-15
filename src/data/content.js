@@ -7,15 +7,15 @@ const WebsiteData = {
     socialItems: [
       {
         link: "https://www.instagram.com/bibinthomas951/",
-        icon: "uil-instagram",
+        icon: "bx bxl-instagram",
       },
       {
         link: "https://github.com/bibinthomas123",
-        icon: "uil-github",
+        icon: "bx bxl-github",
       },
       {
         link: "https://www.linkedin.com/in/bibin-thomas-1962a2225/",
-        icon: "uil-linkedin",
+        icon: "bx bxl-linkedin-square",
       },
     ],
   },
@@ -26,12 +26,12 @@ const WebsiteData = {
       {
         name: "Working at",
         desc: "Whizoid Studio",
-        icon: "bx bx-briefcase-alt-2",
+        icon: "bx bx-briefcase",
       },
       {
         name: "Position",
         desc: "Internship",
-        icon: "uil uil-sitemap",
+        icon: "bx bx-sitemap",
       },
       {
         name: "Status",
@@ -145,7 +145,7 @@ const WebsiteData = {
       {
         id: 1,
         title: ["Sketch"],
-        icon: "uil uil-object-ungroup",
+        icon: "bx bxl-sketch",
         desc: " It is a visual representation of the final product that will be developed.",
         content:
           "The web design sketch is the most important part of the design process. A web design sketch should not only show a website’s layout, but also its content, navigation, and interactive elements. The sketch should be created on paper or with digital tools like Photoshop or Figma",
@@ -153,14 +153,14 @@ const WebsiteData = {
       {
         id: 2,
         title: ["Create ", " Backend"],
-        icon: "uil uil-server-connection",
+        icon: "bx bx-server",
         desc: "Frontend design makes webpages and apps appealing and interactive.",
         content: `What we call the "backend" of a website or app is actually the "server-side architecture and logic" that provides for and manages the "frontend data  and features.`,
       },
       {
         id: 3,
         title: ["UI", " Design"],
-        icon: "uil uil-icons",
+        icon: "bx bxs-paint",
         desc: "A user interface is the part of a computer system that a user interacts with in order to enter commands and information.",
         content:
           " It is often referred to as the 'face' of the system. It can be graphically displayed on a monitor, or it can be a text-only interface such as those commonly found on mobile devices. I provided the UI which will satifies your requirements and the the clients",
@@ -168,7 +168,7 @@ const WebsiteData = {
       {
         id: 4,
         title: ["Responsive ", " Design"],
-        icon: "uil uil-mobile-android",
+        icon: "bx bx-mobile-alt",
         desc: "Web design that adapts to different screen sizes and devices is called responsive design.",
         content:
           "Responsive design is a technique in web design for creating websites that provide an optimal viewing experience—easy reading and navigation with a minimum of resizing, panning, and scrolling—across a wide range of devices The website will be displayed in the best possible way depending on the device being used.",
@@ -176,7 +176,7 @@ const WebsiteData = {
       {
         id: 5,
         title: ["API ", " Design"],
-        icon: "uil uil-cloud-database-tree",
+        icon: "bx bx-cloud-snow ",
         desc: "Developers utilise API endpoints to connect to applications and software systems.",
         content:
           "API stands for Application programming interface. API is a multi-featured interface. This group of functions lets programmers get application data or specialised attributes. Web APIs are HTTP-accessible APIs. This framework helps build HTTP-based RESTFUL services.",
@@ -184,7 +184,7 @@ const WebsiteData = {
       {
         id: 6,
         title: ["Create ", " Frontend"],
-        icon: "uil uil-laptop",
+        icon: "bx bx-code-block",
         desc: "Frontend design makes webpages and apps appealing and interactive.",
         content:
           "The frontend developer is responsible for the design, content and functionality of a website or web application. They are usually responsible for HTML, CSS, JavaScript, and other scripting languages that are used to create interactive web pages.",

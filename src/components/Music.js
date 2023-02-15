@@ -32,7 +32,7 @@ const MusicPlayer = () => {
       }
     }
     setTimeout(() => {
-      audioRef.current.stop();
+      audioRef.current.pause();
     }, 18000);
   }, [isPlaying]);
 
