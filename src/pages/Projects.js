@@ -26,6 +26,9 @@ const ProjectStyle = styled.div`
     outline: none;
     border: none;
   }
+  .searchIcon{
+    filter:invert(1);
+  }
   .projects__searchBar .searchIcon {
     position: absolute;
     font-size: 1.3rem;

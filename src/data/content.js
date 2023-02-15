@@ -242,25 +242,25 @@ const WebsiteData = {
   projects: [
     {
       id: uuidv4(),
-      name: "U Tracker",
+      name: "Blog Website",
       desc: "An application to track your all data from one place. I developed the website and the mobile app",
       img: "https://images.unsplash.com/photo-1529665253569-6d01c0eaf7b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=785&q=80",
     },
     {
       id: uuidv4(),
-      name: "Green CTG",
+      name: "Dashboard for Blogs management",
       desc: "An app to help people to get an overview of how they can make the city beautiful.",
       img: "https://images.unsplash.com/photo-1529665253569-6d01c0eaf7b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=785&q=80",
     },
     {
       id: uuidv4(),
-      name: "Coin Tracker",
+      name: "Whizoid Studio",
       desc: "Using this app you can track any e coin. Also you will get a good advise about investment form the professional",
       img: "https://images.unsplash.com/photo-1529665253569-6d01c0eaf7b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=785&q=80",
     },
     {
       id: uuidv4(),
-      name: "Cavin's Portfolio",
+      name: "Todo List",
       desc: "A portfolio for Cavin jr. A artist from New york city. The portfolio is made using ReactJs and GatsbyJs.",
       img: "https://images.unsplash.com/photo-1529665253569-6d01c0eaf7b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=785&q=80",
     },

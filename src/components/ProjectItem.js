@@ -27,8 +27,9 @@ const ProjectItemStyles = styled.div`
     color: var(--gray-1);
   }
   .projectItem__desc {
-    font-size: 1.6rem;
     font-family: "RobotoMono Regular";
+    font-size: 1.6rem;
+    color:var(--subtitle-color);
     margin-top: 1rem;
   }
   @media only screen and (max-width: 768px) {

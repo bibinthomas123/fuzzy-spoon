@@ -15,6 +15,7 @@
   --subtitle-color: hsl(var(--hue), var(--sat), 60%);
   --description-color: hsl(var(--hue), var(--sat), 70%);
   --text-color: hsl(var(--hue), var(--sat), 10%);
+  --button-hover-color: #9b9b9b;
   --body-color: #000000;
   --container-color: #f9f9f9;
   --container-color-dark: #101010;
@@ -194,10 +195,11 @@ img {
   padding: 1.25rem 2rem;
   border-radius: 1rem;
   font-weight: var(--font-medium);
+  transition: 0.2s;
 }
 
 .button:hover {
-  background-color: var(--subtitle-color);
+  background-color: var(--button-hover-color);
 }
 
 .button__icon {

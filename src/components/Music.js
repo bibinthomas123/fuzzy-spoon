@@ -31,6 +31,9 @@ const MusicPlayer = () => {
         audioRef.current.pause();
       }
     }
+    setTimeout(() => {
+      audioRef.current.stop();
+    }, 18000);
   }, [isPlaying]);
 
   const handlePlayPause = () => {
