@@ -98,6 +98,7 @@
   }
   .nav__close:hover {
     color: var(--title-color-dark);
+    filter: invert(1);
   }
 
   .nav__toggle {
