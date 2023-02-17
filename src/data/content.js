@@ -75,6 +75,7 @@ const WebsiteData = {
       ],
     },
   },
+
   skills: {
     title: "Skills",
     desc: "My Technical Level",
@@ -95,7 +96,7 @@ const WebsiteData = {
           level: "70%",
         },
         {
-          name: "Bootstrap",
+          name: "API Integration",  
           level: "90%",
         },
         {
@@ -103,8 +104,8 @@ const WebsiteData = {
           level: "80%",
         },
         {
-          name: "Git",
-          level: "90%",
+          name: "Redux",
+          level: "80%",
         },
       ],
     },
@@ -132,9 +133,68 @@ const WebsiteData = {
           level: "90%",
         },
         {
-          name: "API",
+          name: "REST API",
           level: "90%",
         },
+      ],
+    },
+    tools: {
+      title: "Tools & Softwares ",
+      skills: [
+        {
+          name: "Figma",
+          level: "90%",
+        },
+        {
+          name: "Github",
+          level: "90%",
+        },
+        {
+          name: "Postman",
+          level: "90%",
+        },
+        {
+          name: "Heroku",
+          level: "90%",
+        },
+        {
+          name: "VsCode",
+          level: "90%",
+        },
+        {
+          name: "Git",
+          level: "90%",
+        },
+      ],
+    },
+    programming: {
+      title: "Programming Languages",
+      skills: [
+        {
+          name: "Python",
+          level: "90%",
+        },
+        {
+          name: "C",
+          level: "80%",
+        },
+        {
+          name: "C++",
+          level: "80%",
+        },
+        {
+          name: "Java",
+          level: "70%",
+        },
+        {
+          name: "Javascript",
+          level: "70%",
+        },
+        {
+          name: "PHP",
+          level: "70%",
+        },
+
       ],
     },
   },
