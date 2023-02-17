@@ -847,7 +847,6 @@ img {
 .services__modal-close:hover::before {
   background-color: #000000;
   color: #ffffff;
-  transition: 0.3s;
   border-radius: 50%;
 }
 
