@@ -76,8 +76,8 @@
   --z-modal: 1000;
 }
 ::selection {
- color:var(--body-color);
- background-color: var(--white);
+ color:var(--white-2);
+ background-color: white;
 }
 /* Responsive typography */
 @media screen and (max-width: 992px) {
