@@ -76,8 +76,8 @@
   --z-modal: 1000;
 }
 ::selection {
- color:var(--white-2);
- background-color: white;
+  color: var(--white-2);
+  background-color: white;
 }
 /* Responsive typography */
 @media screen and (max-width: 992px) {
@@ -132,8 +132,6 @@ ul {
 a {
   text-decoration: none;
 }
-
-
 
 button {
   cursor: pointer;
@@ -613,7 +611,6 @@ img {
   column-gap: 0.5rem;
 }
 
-
 .bx-badge-check {
   color: var(--title-color);
   filter: invert(1);
@@ -844,11 +841,13 @@ img {
   font-size: 1.7rem;
   color: var(--title-color);
   cursor: pointer;
-  padding: 0 7px 0 7px;
+  padding: 0 10px 0 10px;
 }
 
-.services__modal-close:hover {
-  background-color: #dedede;
+.services__modal-close:hover::before {
+  background-color: #000000;
+  color: #ffffff;
+  transition: 0.3s;
   border-radius: 50%;
 }
 

@@ -40,7 +40,7 @@ function Service() {
                 onClick={() => toggleTab(item.id)}
               >
                 View More
-                <i className="uil uil-arrow-right services__button-icon"></i>
+                <i className="bx bx-right-arrow-alt services__button-icon"></i>
               </span>
 
               <motion.section
@@ -73,7 +73,7 @@ function Service() {
                 >
                   <i
                     onClick={() => toggleTab(0)}
-                    className="uil uil-times services__modal-close"
+                    className="bx bx-x services__modal-close"
                   ></i>
                   <h3 className="services__modal-title">{item.title}</h3>
                   <p className="services__modal-description">{item.desc}</p>
