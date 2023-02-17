@@ -20,7 +20,7 @@ const ProjectStyle = styled.div`
   .projects__searchBar input {
     width: 100%;
     padding: 0.8rem;
-    color: var(--white);
+    color: white;
     background-color: var(--gray-2);
     border-radius: 6px;
     outline: none;
