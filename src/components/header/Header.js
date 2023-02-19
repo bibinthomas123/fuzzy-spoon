@@ -8,10 +8,8 @@ function Header() {
   return (
     <header className="header">
       <nav className="nav container">
-        {/* <NavLink to={"/"} className="nav__logo">
-          Bibin Thomas
-        </NavLink> */}
         <MusicPlayer />
+
         <div className={Toggle ? "nav__menu show-menu" : "nav__menu"}>
           <ul className="nav__list grid">
             <li className="nav__item">
@@ -76,11 +74,11 @@ function Header() {
             </li>
           </ul>
 
-          <i class="bx bx-x nav__close" onClick={() => showMenu(!Toggle)} />
+          <i className="bx bx-x nav__close" onClick={() => showMenu(!Toggle)} />
         </div>
 
         <div className="nav__toggle" onClick={() => showMenu(!Toggle)}>
-          <i class="bx bx-grid-alt"></i>
+          <i className="bx bx-grid-alt"></i>
         </div>
       </nav>
     </header>
