@@ -2,9 +2,10 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./header.css";
 import useSound from "use-sound";
-import click from "../Sounds/Trail Swoosh.mp3";
+import click from "../assests/Sounds/Trail Swoosh.mp3";
+
 function Header() {
-  const [play] = useSound(click,{
+  const [play] = useSound(click, {
     volume: 0.25,
   });
   const [Toggle, showMenu] = useState(false);
@@ -12,7 +13,9 @@ function Header() {
   return (
     <header className="header">
       <nav className="nav container">
-        <div className="nav__logo">Bibin thomas</div>
+        <NavLink to={"/"} onClick={play} className="nav__logo">
+          Bibin thomas
+        </NavLink>
 
         <div className={Toggle ? "nav__menu show-menu" : "nav__menu"}>
           <ul className="nav__list grid">
