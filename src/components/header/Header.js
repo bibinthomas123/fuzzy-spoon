@@ -1,20 +1,25 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./header.css";
-import MusicPlayer from "../Music";
+import useSound from "use-sound";
+import click from "../Sounds/Trail Swoosh.mp3";
 function Header() {
+  const [play] = useSound(click,{
+    volume: 0.25,
+  });
   const [Toggle, showMenu] = useState(false);
 
   return (
     <header className="header">
       <nav className="nav container">
-        <MusicPlayer />
+        <div className="nav__logo">Bibin thomas</div>
 
         <div className={Toggle ? "nav__menu show-menu" : "nav__menu"}>
           <ul className="nav__list grid">
             <li className="nav__item">
               <NavLink
                 to={"/"}
+                onClick={play}
                 className={({ isActive }) => {
                   return isActive ? "nav__link active-link" : "nav__link";
                 }}
@@ -25,6 +30,7 @@ function Header() {
             <li className="nav__item">
               <NavLink
                 to={"/about"}
+                onClick={play}
                 className={({ isActive }) => {
                   return isActive ? "nav__link active-link" : "nav__link";
                 }}
@@ -35,6 +41,7 @@ function Header() {
             <li className="nav__item">
               <NavLink
                 to={"/skills"}
+                onClick={play}
                 className={({ isActive }) => {
                   return isActive ? "nav__link active-link" : "nav__link";
                 }}
@@ -45,6 +52,7 @@ function Header() {
             <li className="nav__item">
               <NavLink
                 to={"/service"}
+                onClick={play}
                 className={({ isActive }) => {
                   return isActive ? "nav__link active-link" : "nav__link";
                 }}
@@ -55,6 +63,7 @@ function Header() {
             <li className="nav__item">
               <NavLink
                 to={"/portfolio"}
+                onClick={play}
                 className={({ isActive }) => {
                   return isActive ? "nav__link active-link" : "nav__link";
                 }}
@@ -65,6 +74,7 @@ function Header() {
             <li className="nav__item">
               <NavLink
                 to={"/contact"}
+                onClick={play}
                 className={({ isActive }) => {
                   return isActive ? "nav__link active-link" : "nav__link";
                 }}
