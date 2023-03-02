@@ -8,6 +8,7 @@ import Layout from "./pages/Layout";
 import Service from "./pages/Service";
 import Projects from "./pages/Projects";
 import Contact from "./pages/contact";
+import Map from "./components/Map";
 import { AnimatePresence } from "framer-motion";
 import Preloader from "./components/Preloader";
 import PageNotFound from "./components/PageNotFound";
@@ -15,7 +16,7 @@ import PageNotFound from "./components/PageNotFound";
 function App() {
   const location = useLocation();
   const [isLoading, setIsLoading] = useState(true);
-  
+
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
@@ -26,10 +27,7 @@ function App() {
   }
   return (
     <>
-      <AnimatePresence
-        mode="wait"
-        onExitComplete={() => window.scrollTo(0, 0)}
-      >
+      <AnimatePresence mode="wait" onExitComplete={() => window.scrollTo(0, 0)}>
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
@@ -39,6 +37,7 @@ function App() {
             <Route path="/portfolio" element={<Projects />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<PageNotFound />} />
+            <Route path="/map" element={<Map />} />
           </Route>
         </Routes>
       </AnimatePresence>

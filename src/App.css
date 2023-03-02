@@ -27,7 +27,7 @@
   --description-color: hsl(var(--hue), var(--sat), 70%);
   --text-color: hsl(var(--hue), var(--sat), 10%);
   --button-hover-color: #9b9b9b;
-  --body-color: #000000;
+  /* --body-color: #000000; */
   --container-color: #f9f9f9;
   --container-color-dark: #101010;
 
