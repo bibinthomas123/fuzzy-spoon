@@ -959,7 +959,7 @@ img {
 .qualification__button {
   font-size: var(--h3-font-size);
   font-weight: var(--font-medium);
-  color: var(--title-color);
+  color: var(--subtitle-color);
   margin: 0 var(--mb-1);
   cursor: pointer;
   transition: 0.5s ease-in-out;
@@ -975,7 +975,7 @@ img {
 }
 
 .qualification__active {
-  color: var(--subtitle-color);
+  color: white
 }
 
 .qualification__sections {

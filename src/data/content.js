@@ -51,9 +51,9 @@ const WebsiteData = {
     qualifications: {
       education: [
         {
-          name: "Mount Carmel H.S",
-          subtitle: "Schooling",
-          year: "2006 - 2018",
+          name: "Loyola Academy",
+          subtitle: "B.Sc Computer Science",
+          year: "2021 - present",
         },
         {
           name: "Sri Gayathri Junior College",
@@ -61,9 +61,9 @@ const WebsiteData = {
           year: "2018 - 2020",
         },
         {
-          name: "Loyola Academy",
-          subtitle: "B.Sc Computer Science",
-          year: "2021 - present",
+          name: "Mount Carmel H.S",
+          subtitle: "Schooling",
+          year: "2006 - 2018",
         },
       ],
       experience: [
@@ -96,7 +96,7 @@ const WebsiteData = {
           level: "70%",
         },
         {
-          name: "API Integration",  
+          name: "API Integration",
           level: "90%",
         },
         {
@@ -194,7 +194,6 @@ const WebsiteData = {
           name: "PHP",
           level: "70%",
         },
-
       ],
     },
   },
@@ -314,9 +313,9 @@ const WebsiteData = {
     },
     {
       id: uuidv4(),
-      name: "Chat Application",
-      desc: "This app will enable real-time text, voice, and video communication across locations.",
-      img: "https://images.unsplash.com/photo-1530811761207-8d9d22f0a141?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      name: "Wheather Forecast",
+      desc: "This app will enable real-time weather information for any location in the world.",
+      img: "https://images.unsplash.com/photo-1567367975896-5a54e8542ddb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
     },
     {
       id: uuidv4(),
