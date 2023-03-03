@@ -39,9 +39,9 @@ const WebsiteData = {
         desc: (
           <>
             <span
-              style={{ color: "red", fontSize: "15px", fontWeight: "bold" }}
+              style={{ color: "#5ad533", fontSize: "15px", fontWeight: "bold" }}
             >
-              Working
+              Available
             </span>
           </>
         ),

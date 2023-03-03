@@ -3,7 +3,7 @@ import styled from "styled-components";
 import ContactForm from "../components/ContactForm.js";
 import ContactInfoItem from "../components/ContactInfoItem.js";
 import { motion } from "framer-motion";
-import Map from "../components/Map.js";
+
 const ContactSectionStyle = styled.div`
   padding: 10rem 0;
   .contactSection__wrapper {
@@ -105,7 +105,6 @@ export default function ContactSection() {
           </div>
         </div>
       </ContactSectionStyle>
-      <Map />
     </motion.div>
   );
 }

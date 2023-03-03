@@ -35,7 +35,8 @@
   font-size: var(--font-medium);
   color: var(--title-color);
   font-weight: var(--font-medium);
-  transition: 0.3s;}
+  transition: 0.3s;
+}
 
 .nav__icon,
 .nav__close,
@@ -77,6 +78,7 @@
   /* show menu */
   .show-menu {
     bottom: 0;
+    background-color: var(--container-color-dark2);
   }
 
   .nav__list {

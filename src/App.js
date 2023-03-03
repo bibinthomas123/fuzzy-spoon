@@ -8,7 +8,6 @@ import Layout from "./pages/Layout";
 import Service from "./pages/Service";
 import Projects from "./pages/Projects";
 import Contact from "./pages/contact";
-import Map from "./components/Map";
 import { AnimatePresence } from "framer-motion";
 import Preloader from "./components/Preloader";
 import PageNotFound from "./components/PageNotFound";
@@ -37,7 +36,6 @@ function App() {
             <Route path="/portfolio" element={<Projects />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<PageNotFound />} />
-            <Route path="/map" element={<Map />} />
           </Route>
         </Routes>
       </AnimatePresence>
