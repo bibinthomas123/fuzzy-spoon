@@ -47,7 +47,7 @@ export default function ProjectItem({
   return (
     <ProjectItemStyles>
       <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-        <Link to="/projects" className="projectItem__img">
+        <Link to="#" className="projectItem__img">
           <img src={img} alt="project img" />
         </Link>
         <div className="projectItem__info">
