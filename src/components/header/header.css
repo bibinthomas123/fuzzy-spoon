@@ -59,6 +59,9 @@
   .header {
     top: initial;
     bottom: 0;
+    background-color: rgb(10, 10, 10);
+    border-radius: 7px 7px 0 0;
+    padding: 0.75rem 0.25rem 0.4rem;
   }
   .nav {
     height: var(--header-height);
@@ -79,6 +82,7 @@
   .show-menu {
     bottom: 0;
     background-color: var(--container-color-dark2);
+    transition: 0.5s linear;
   }
 
   .nav__list {

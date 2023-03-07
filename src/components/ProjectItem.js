@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-// import ProjectImg from '../assets/images/projectImg.png';
 import { motion } from "framer-motion";
+
 const ProjectItemStyles = styled.div`
   .projectItem__img {
     width: 100%;
@@ -29,7 +29,7 @@ const ProjectItemStyles = styled.div`
   .projectItem__desc {
     font-family: "RobotoMono Regular";
     font-size: 1.6rem;
-    color:var(--subtitle-color);
+    color: var(--subtitle-color);
     margin-top: 1rem;
   }
   @media only screen and (max-width: 768px) {

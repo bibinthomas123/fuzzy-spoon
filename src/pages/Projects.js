@@ -26,8 +26,8 @@ const ProjectStyle = styled.div`
     outline: none;
     border: none;
   }
-  .searchIcon{
-    filter:invert(1);
+  .searchIcon {
+    filter: invert(1);
   }
   .projects__searchBar .searchIcon {
     position: absolute;
@@ -155,7 +155,7 @@ export default function Projects() {
               ></motion.i>
             </form>
           </motion.div>
-          <motion.div className="projects__allItems" layout>
+          <motion.div className="projects__allItems" >
             {projectsData.map((item) => (
               <ProjectItem
                 key={item.id}
