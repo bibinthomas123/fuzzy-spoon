@@ -51,7 +51,7 @@ export default function ContactForm() {
   const [error, setError] = useState(false);
   const [success, setSuccess] = useState(false);
   const sendEmail = async (e) => {
-    emailjs
+    await emailjs
       .sendForm(
         "service_y42skk7",
         "template_xvn4grd",
