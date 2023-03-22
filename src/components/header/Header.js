@@ -6,7 +6,7 @@ import click from "../assests/Sounds/Trail Swoosh.mp3";
 
 function Header() {
   const [play] = useSound(click, {
-    volume: 0.25,
+    volume: 0.1,
   });
   const [Toggle, showMenu] = useState(false);
 
