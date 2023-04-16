@@ -1,8 +1,8 @@
 
 version: 2.1
 
-
 jobs:
+
   preDeploy:
     docker:
       - image: circleci/node:16 
@@ -12,10 +12,11 @@ jobs:
           name:  npm install dependencies
           command: |
            npm install --save
-     - run: 
+      - run: 
            name: build
            command: |
               npm run build
+
 workflows:
   deployWorkflow:
     jobs:
