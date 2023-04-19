@@ -1,4 +1,3 @@
-import React from "react";
 import SectionItem from "./sectionItem";
 import WebsiteData from "../data/content";
 function Sections() {

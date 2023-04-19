@@ -1,6 +1,6 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
 import { useFrame } from "@react-three/fiber";
-import * as THREE from "three";
+import { TextureLoader, RepeatWrapping } from "three";
 import { OrbitControls } from "@react-three/drei";
 
 function Shape() {
@@ -10,11 +10,11 @@ function Shape() {
     meshRef.current.rotation.y += 0.01;
   });
 
-  const texture = new THREE.TextureLoader().load(
+  const texture = new TextureLoader().load(
     "https://bruno-simon.com/prismic/matcaps/8.png"
   );
-  texture.wrapS = THREE.RepeatWrapping;
-  texture.wrapT = THREE.RepeatWrapping;
+  texture.wrapS = RepeatWrapping;
+  texture.wrapT = RepeatWrapping;
   texture.repeat.set(4, 4);
 
   return (

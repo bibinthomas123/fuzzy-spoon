@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import WebsiteData from "../data/content";
 import { motion } from "framer-motion";
 
@@ -26,14 +26,14 @@ function Service() {
         <div className="services__container container grid">
           {data.cardDetails.map((item, i) => (
             <div className="services__content" key={i}>
-              <React.Fragment>
+              <>
                 <i className={`${item.icon} services__icon`}></i>
                 <h3 className="services__title">
                   {item.title[0]}
                   <br />
                   {item.title[1]}
                 </h3>
-              </React.Fragment>
+              </>
 
               <span
                 className="services__button"

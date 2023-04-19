@@ -1,4 +1,3 @@
-import React from "react";
 import illustration from "../assests/404.svg";
 import "./PageNotFound.css";
 import { motion } from "framer-motion";

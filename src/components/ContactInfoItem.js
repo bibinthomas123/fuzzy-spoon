@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 import PText from "./PText.js";
 import { motion } from "framer-motion";

@@ -1,4 +1,3 @@
-import React from "react";
 import AboutImg from "../assests/profile.jpg";
 import CV from "../assests/Bibinsresume.pdf";
 import Info from "../components/Info";

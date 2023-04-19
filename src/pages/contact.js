@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 import ContactForm from "../components/ContactForm.js";
 import ContactInfoItem from "../components/ContactInfoItem.js";

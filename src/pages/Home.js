@@ -1,4 +1,3 @@
-import React from "react";
 import Social from "../components/Social";
 import Data from "../components/Data";
 import { motion } from "framer-motion";
