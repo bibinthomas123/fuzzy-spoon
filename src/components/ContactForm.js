@@ -50,7 +50,7 @@ export default function ContactForm() {
   const [message, setMessage] = useState("");
   const [error, setError] = useState(false);
   const [success, setSuccess] = useState(false);
-  
+
   const sendEmail = async (e) => {
     await emailjs
       .sendForm(
