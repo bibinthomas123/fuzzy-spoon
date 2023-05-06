@@ -1638,3 +1638,16 @@ img {
 .singleBlog{
   margin-top: 50px;
 }
+
+
+.blogGrid__paragragh{
+  display: -webkit-box;
+  -webkit-line-clamp:4 ;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+ .singleBlog_para{
+  color:var( --gray-1)
+ }

@@ -68,11 +68,11 @@ const BlogGrid = ({ blog }) => {
       </BlogGridLink>
       <div>
         <BlogGridTitle>
-          <BlogGridLink to={`/blogs/${id}`}  className="blogGrid__title">
+          <BlogGridLink to={`/blogs/${id}`} className="blogGrid__title">
             {title}
           </BlogGridLink>
         </BlogGridTitle>
-        <BlogGridParagraph>{paragraph}</BlogGridParagraph>
+        <BlogGridParagraph className="blogGrid__paragragh">{paragraph}</BlogGridParagraph>
       </div>
     </BlogGridContainer>
   );

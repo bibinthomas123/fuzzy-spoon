@@ -24,21 +24,18 @@ const SingleBlog = () => {
                 <div className="flex flex-wrap items-center">
                   <div className="mb-5 flex items-center">
                     <p className="mr-5 flex items-center text-base font-medium text-body-color">
-                      {/* 
-                    calendar icon 
-                */}
-                      <i className="bx bx-calendar-md"></i>
+                      <i className="bx bx-calendar bx-sm"></i>&nbsp;
                       {blog.publishDate}
                     </p>
                   </div>
                 </div>
                 <div className="mb-5">
-                  <a
-                    href="#0"
+                  <p
                     className="inline-flex items-center justify-center rounded-full bg-primary py-2 px-4 text-sm font-semibold text-white"
+                    style={{ textTransform: "capitalize" }}
                   >
                     {blog.tags}
-                  </a>
+                  </p>
                 </div>
               </div>
 
@@ -48,20 +45,20 @@ const SingleBlog = () => {
                     <img
                       src={blog.image}
                       alt="imaget454rfrthrh"
-                      fill
+    
                       className="object-cover object-center"
                     />
                   </div>
                 </div>
-                <p className="mb-8 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
+                <p className="mb-8 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed singleBlog_para">
                   {blog.paragraph}
                 </p>
               </div>
-              <h5 className="mb-3 text-sm font-medium text-body-color sm:text-right">
+              <h5 className="mb-3 text-sm font-medium text-body-color sm:text-right singleBlog_para">
                 Share this post :
               </h5>
               <div className="flex items-center sm:justify-end">
-                <SharePost />
+                <SharePost id={blog.id}/>
               </div>
             </div>
           </div>
