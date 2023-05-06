@@ -8,6 +8,7 @@ const BlogGridContainer = styled.div`
   background-color: #fff;
   border-radius: 0.5rem;
   min-height: 500px;
+  max-height: 550px;
   min-width: 335px;
 `;
 

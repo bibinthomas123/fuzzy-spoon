@@ -45,6 +45,7 @@ const SingleBlog = () => {
                     <img
                       src={blog.image}
                       alt="imaget454rfrthrh"
+                      fill="cover"
                       className="object-cover object-center"
                     />
                   </div>
