@@ -8,6 +8,7 @@ import Layout from "./pages/Layout";
 import Service from "./pages/Service";
 import Projects from "./pages/Projects";
 import Contact from "./pages/contact";
+import Blog from "./pages/Blog";
 import { AnimatePresence } from "framer-motion";
 import Preloader from "./components/Preloader";
 import PageNotFound from "./components/PageNotFound";
@@ -22,7 +23,8 @@ function App() {
     }, 5000);
   }, []);
   if (isLoading) {
-    return <Preloader />;
+    // return <Preloader />;
+    return <></>;
   }
   return (
     <>
@@ -34,6 +36,7 @@ function App() {
             <Route path="/skills" element={<Skills />} />
             <Route path="/service" element={<Service />} />
             <Route path="/portfolio" element={<Projects />} />
+            <Route path="/blogs" element={<Blog />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<PageNotFound />} />
           </Route>
