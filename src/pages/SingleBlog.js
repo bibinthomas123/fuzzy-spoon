@@ -1,7 +1,6 @@
 import React from "react";
 import blogData from "../data/blogs";
 import { useParams } from "react-router-dom";
-import TagButton from "../components/TagButton";
 import SharePost from "../components/SharePost";
 
 const SingleBlog = () => {
@@ -48,7 +47,7 @@ const SingleBlog = () => {
                   <div className="relative aspect-[97/60] w-full sm:aspect-[97/44]">
                     <img
                       src={blog.image}
-                      alt="image"
+                      alt="imaget454rfrthrh"
                       fill
                       className="object-cover object-center"
                     />
