@@ -24,8 +24,8 @@ function App() {
     }, 5000);
   }, []);
   if (isLoading) {
-    // return <Preloader />;
-    return <></>;
+    return <Preloader />;
+    
   }
   return (
     <>
