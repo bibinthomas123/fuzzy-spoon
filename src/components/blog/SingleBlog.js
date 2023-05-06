@@ -8,9 +8,9 @@ const SingleBlogContainer = styled.div`
   background-color: #fff;
   border-radius: 0.5rem;
   min-height: 500px;
-  min-width: 335px;
+  min-width: 335px
 `;
-
+ 
 const SingleBlogLink = styled(Link)`
   display: block;
   position: relative;
