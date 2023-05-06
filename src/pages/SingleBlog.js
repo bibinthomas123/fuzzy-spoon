@@ -2,14 +2,14 @@ import React from "react";
 import blogData from "../data/blogs";
 import { useParams } from "react-router-dom";
 import SharePost from "../components/SharePost";
+import PageNotFound from "../components/PageNotFound";
 
 const SingleBlog = () => {
   const { id } = useParams();
   const blog = blogData.find((blog) => blog.id === Number(id));
 
-  console.log(blog);
   if (!blog) {
-    return <div>Blog not found</div>;
+    return <PageNotFound />;
   }
   return (
     <section className="section singleBlog">
@@ -45,7 +45,6 @@ const SingleBlog = () => {
                     <img
                       src={blog.image}
                       alt="imaget454rfrthrh"
-    
                       className="object-cover object-center"
                     />
                   </div>
@@ -58,7 +57,7 @@ const SingleBlog = () => {
                 Share this post :
               </h5>
               <div className="flex items-center sm:justify-end">
-                <SharePost id={blog.id}/>
+                <SharePost id={blog.id} />
               </div>
             </div>
           </div>
