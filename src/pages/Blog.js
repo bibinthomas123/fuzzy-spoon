@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import SingleBlog from "../components/blog/SingleBlog";
+import BlogGrid from "../components/blog/BlogGrid";
 import blogData from "../data/blogs";
 
 function Blog() {
@@ -22,22 +22,22 @@ function Blog() {
           My Blogs
         </motion.h2>
 
-        <div className="singleblog__container">
+        <div className="blog__container">
           {blogData.map((blog, index) => (
             <motion.div
               key={index}
               style={{ width: "100%" }}
               initial={{ y: -100, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              exit={{ y: 50, opacity: 0 }}
+              animate={{ y: 0, opacity: 1}}
+              exit={{ y: 80, opacity: 0 }}
               transition={{
-                delay: index * 0.1 + 0.1,
+                delay: index * 0.1 + 0.3,
                 type: "spring",
                 stiffness: 260,
                 damping: 20,
               }}
             >
-              <SingleBlog blog={blog} />
+              <BlogGrid blog={blog} />
             </motion.div>
           ))}
         </div>

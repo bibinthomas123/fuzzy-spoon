@@ -2,22 +2,22 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-const SingleBlogContainer = styled.div`
+const BlogGridContainer = styled.div`
   margin-bottom: 1.5rem;
   padding: 1.5rem;
   background-color: #fff;
   border-radius: 0.5rem;
   min-height: 500px;
-  min-width: 335px
+  min-width: 335px;
 `;
- 
-const SingleBlogLink = styled(Link)`
+
+const BlogGridLink = styled(Link)`
   display: block;
   position: relative;
   text-decoration: none;
 `;
 
-const SingleBlogSpan = styled.span`
+const BlogGridSpan = styled.span`
   position: absolute;
   top: 1rem;
   right: 1rem;
@@ -34,7 +34,7 @@ const SingleBlogSpan = styled.span`
   text-transform: uppercase;
 `;
 
-const SingleBlogImage = styled.img`
+const BlogGridImage = styled.img`
   width: 100%;
   height: auto;
   padding: 0px;
@@ -44,7 +44,7 @@ const SingleBlogImage = styled.img`
   transition: all 0.3s ease-in-out;
 `;
 
-const SingleBlogTitle = styled.h3`
+const BlogGridTitle = styled.h3`
   margin-top: 1.5rem;
   margin-bottom: 1rem;
   font-size: 1.5rem;
@@ -52,33 +52,30 @@ const SingleBlogTitle = styled.h3`
   color: #333;
 `;
 
-const SingleBlogParagraph = styled.p`
+const BlogGridParagraph = styled.p`
   margin-bottom: 1rem;
   font-size: 1rem;
   color: #6b7280;
 `;
 
-const SingleBlog = ({ blog }) => {
-  const { title, image, paragraph, tags } = blog;
+const BlogGrid = ({ blog }) => {
+  const { title, image, paragraph, tags, id } = blog;
   return (
-    <>
-      {" "}
-      <SingleBlogContainer data-wow-delay=".1s">
-        <SingleBlogLink to="/" className="singleBlog">
-          <SingleBlogImage src={image} alt="image" />
-          <SingleBlogSpan>{tags[0]}</SingleBlogSpan>
-        </SingleBlogLink>
-        <div>
-          <SingleBlogTitle>
-            <SingleBlogLink to="/" className="singleBlog__title">
-              {title}
-            </SingleBlogLink>
-          </SingleBlogTitle>
-          <SingleBlogParagraph>{paragraph}</SingleBlogParagraph>
-        </div>
-      </SingleBlogContainer>
-    </>
+    <BlogGridContainer data-wow-delay=".1s">
+      <BlogGridLink to={`/blogs/${id}`} className="blogGrid">
+        <BlogGridImage src={image} alt="image" />
+        <BlogGridSpan>{tags[0]}</BlogGridSpan>
+      </BlogGridLink>
+      <div>
+        <BlogGridTitle>
+          <BlogGridLink to={`/blogs/${id}`}  className="blogGrid__title">
+            {title}
+          </BlogGridLink>
+        </BlogGridTitle>
+        <BlogGridParagraph>{paragraph}</BlogGridParagraph>
+      </div>
+    </BlogGridContainer>
   );
 };
 
-export default SingleBlog;
+export default BlogGrid;
