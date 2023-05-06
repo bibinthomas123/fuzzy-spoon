@@ -30,11 +30,11 @@ const WebsiteData = {
       },
       {
         name: "Position",
-        desc: "Internship",
+        desc: "Junior Developer",
         icon: "bx bx-sitemap",
       },
       {
-        name: "Status",
+        name: "FreeLance",
         icon: "bx bx-bulb",
         desc: (
           <>

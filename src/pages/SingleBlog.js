@@ -3,7 +3,7 @@ import blogData from "../data/blogs";
 import { useParams } from "react-router-dom";
 import SharePost from "../components/SharePost";
 import PageNotFound from "../components/PageNotFound";
-
+import TagButton from "../components/TagButton";
 const SingleBlog = () => {
   const { id } = useParams();
   const blog = blogData.find((blog) => blog.id === Number(id));
@@ -30,11 +30,10 @@ const SingleBlog = () => {
                   </div>
                 </div>
                 <div className="mb-5">
-                  <p
-                    className="inline-flex items-center justify-center rounded-full bg-primary py-2 px-4 text-sm font-semibold text-white"
-                    style={{ textTransform: "capitalize" }}
-                  >
-                    {blog.tags}
+                  <p style={{ textTransform: "capitalize" }}>
+                    {blog.tags.map((tag, i) => (
+                      <TagButton key={i} text={tag} />
+                    ))}
                   </p>
                 </div>
               </div>

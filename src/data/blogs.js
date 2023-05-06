@@ -363,7 +363,7 @@ const blogData = [
     ),
     image:
       "https://images.unsplash.com/photo-1640282693834-f941c0c012aa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-    tags: ["Technology"],
+    tags: ["Technology" ,"guide"],
     publishDate: "10/Oct/2020",
   },
   {
@@ -418,7 +418,7 @@ const blogData = [
     image:
       "https://images.unsplash.com/photo-1590457429592-1abd191ad4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80",
 
-    tags: ["books"], 
+    tags: ["books" ], 
     publishDate: "20/05/2023",
   },
 ];
