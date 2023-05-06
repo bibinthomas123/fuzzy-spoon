@@ -76,6 +76,17 @@ function Header() {
             </li>
             <li className="nav__item">
               <NavLink
+                to={"/blogs"}
+                onClick={play}
+                className={({ isActive }) => {
+                  return isActive ? "nav__link active-link" : "nav__link";
+                }}
+              >
+                <i className="uil uil-scenery nav__icon" /> Blogs
+              </NavLink>
+            </li>
+            <li className="nav__item">
+              <NavLink
                 to={"/contact"}
                 onClick={play}
                 className={({ isActive }) => {
