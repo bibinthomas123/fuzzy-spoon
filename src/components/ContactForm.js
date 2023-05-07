@@ -55,7 +55,6 @@ export default function ContactForm() {
 
     // Form validation
     if (!name || !email || !message) {
-      setError(true);
       toast.error("Please fill in all fields.", {
         position: toast.POSITION.TOP_RIGHT,
       });
@@ -86,7 +85,6 @@ export default function ContactForm() {
     setName("");
     setEmail("");
     setMessage("");
-    setSuccess(true);
   };
   return (
     <>
