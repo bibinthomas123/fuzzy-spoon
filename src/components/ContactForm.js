@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import styled from "styled-components";
-import { Alert, AlertTitle } from "@mui/material";
 import emailjs, { init } from "@emailjs/browser";
+import { toast } from "react-toastify";
+
 init("DTZtiAh1b05NZclpZ");
 
 const FormStyle = styled.form`
@@ -52,6 +53,17 @@ export default function ContactForm() {
   const [success, setSuccess] = useState(false);
 
   const sendEmail = async (e) => {
+    e.preventDefault();
+
+    // Form validation
+    if (!name || !email || !message) {
+      setError(true);
+      toast.error("Please fill in all fields.", {
+        position: toast.POSITION.TOP_RIGHT,
+      });
+      return;
+    }
+
     await emailjs
       .sendForm(
         "service_y42skk7",
@@ -62,53 +74,28 @@ export default function ContactForm() {
       .then(
         (result) => {
           setError(false);
+          toast.success("Message sent!", {
+            position: toast.POSITION.TOP_RIGHT,
+          });
         },
         (error) => {
           setError(true);
+          toast.error("An error occurred.", {
+            position: toast.POSITION.TOP_RIGHT,
+          });
         }
       );
-  };
-  const handleSubmit = (e) => {
-    e.preventDefault();
 
-    sendEmail(e);
-    setSuccess(true);
-    // clearing the form
+    // Clearing the form
     setName("");
     setEmail("");
     setMessage("");
+    setSuccess(true);
   };
-
   return (
     <>
       <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-        {success ? (
-          <motion.div
-            initial={{ y: -50, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            style={{ marginBottom: "2rem" }}
-          >
-            {error ? (
-              <Alert
-                severity="error"
-                variant="filled"
-                style={{ fontSize: "20px" }}
-              >
-                <AlertTitle>Error in sending..</AlertTitle>
-              </Alert>
-            ) : (
-              <Alert
-                severity="success"
-                variant="filled"
-                style={{ fontSize: "20px" }}
-              >
-                <AlertTitle>Your message has been sent! </AlertTitle>
-              </Alert>
-            )}
-          </motion.div>
-        ) : null}
-
-        <FormStyle onSubmit={handleSubmit}>
+        <FormStyle onSubmit={sendEmail}>
           <motion.div
             initial={{ x: -50, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}

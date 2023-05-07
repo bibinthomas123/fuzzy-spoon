@@ -622,7 +622,7 @@ img {
 .skills,
 .bx-badge-check {
   font-size: 1rem;
-  color: var(--title-color);
+  color:var(--container-color-dark)
 }
 
 .skills__name {
@@ -1191,7 +1191,6 @@ img {
   margin: 0.75rem 5px;
   color:white;
   display: inline-flex;
-  
   height: 2.25rem;
   width: 2.25rem;
   align-items: center;

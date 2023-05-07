@@ -6,6 +6,9 @@ import PageNotFound from "../components/PageNotFound";
 import TagButton from "../components/TagButton";
 import slugify from "slugify";
 import readingTime from "reading-time/lib/reading-time";
+import { toast } from "react-toastify";
+import { motion } from "framer-motion";
+
 const SingleBlog = () => {
   const { slug } = useParams();
   const blog = blogData.find((blog) => {
@@ -23,8 +26,15 @@ const SingleBlog = () => {
   if (!blog) {
     return <PageNotFound />;
   }
+
   return (
-    <section className="section">
+    <motion.section
+      className="section"
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ type: "spring", damping: 25, stiffness: 120 }}
+    >
+      {" "}
       <div className="container" style={{ marginTop: "50px" }}>
         <div className="-mx-4 flex flex-wrap justify-center">
           <div className="w-full px-4">
@@ -73,13 +83,18 @@ const SingleBlog = () => {
                 Share this post :
               </h5>
               <div className="flex items-center sm:justify-end">
-                <SharePost id={blog.id} />
+                <SharePost
+                  id={slugify(blog.title, {
+                    lower: true,
+                    remove: /[*+~.()'"!?:@]/g,
+                  })}
+                />
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

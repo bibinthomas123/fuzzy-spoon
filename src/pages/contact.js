@@ -3,6 +3,7 @@ import ContactForm from "../components/ContactForm.js";
 import ContactInfoItem from "../components/ContactInfoItem.js";
 import { motion } from "framer-motion";
 
+
 const ContactSectionStyle = styled.div`
   padding: 10rem 0;
   .contactSection__wrapper {

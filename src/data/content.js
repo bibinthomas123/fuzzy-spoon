@@ -70,133 +70,131 @@ const WebsiteData = {
         {
           name: "Whizoid Studio",
           subtitle: "Internship",
-          year: "2021 - present",
+          year: "10/2022 - 2/2023 ",
+        },
+        {
+          name: "Whizoid Studio",
+          subtitle: "Junior webDeveloper",
+          year: "5/2023 - present",
         },
       ],
     },
   },
 
-  skills: {
-    title: "Skills",
-    desc: "My Technical Level",
-
-    frontend: {
-      title: "Frontend Skills",
+  skills: [
+    {
+      section: "Frontend",
       skills: [
         {
           name: "HTML",
-          level: "90%",
+          icon: "bx bxl-html5",
         },
         {
           name: "CSS",
-          level: "80%",
+          icon: "bx bxl-css3",
         },
         {
           name: "Javascript",
-          level: "70%",
+          icon: "bx bxl-javascript",
         },
         {
-          name: "API Integration",
-          level: "90%",
+          name: "Tailwind CSS",
+          icon: "   bx bxl-tailwind-css",
         },
         {
           name: "React Js",
-          level: "80%",
+          icon: "bx bxl-react",
         },
         {
           name: "Redux",
-          level: "80%",
+          icon: "bx bxl-redux",
         },
       ],
     },
-    backend: {
-      title: "Backend Skills",
+    {
+      section: "Backend",
       skills: [
         {
           name: "Node Js",
-          level: "80%",
+          icon: "bx bxl-nodejs",
         },
         {
           name: "Express Js",
-          level: "85%",
+          icon: "bx bxl-nodejs",
         },
         {
           name: "MongoDB",
-          level: "70%",
+          icon: "bx bxl-mongodb",
         },
         {
-          name: "SQL",
-          level: "70%",
+          name: "MySQL",
+          icon: "bx bx-table",
         },
         {
           name: "Flask",
-          level: "90%",
+          icon: "bx bxl-flask",
         },
         {
           name: "REST API",
-          level: "90%",
+          icon: "bx bx-cloud-download",
         },
       ],
     },
-    tools: {
-      title: "Tools & Softwares ",
+    {
+      section: "Tools & Softwares",
       skills: [
         {
           name: "Figma",
-          level: "90%",
+          icon: "bx bxl-figma",
         },
         {
-          name: "Github",
-          level: "90%",
+          name: "Photoshop",
+          icon: "bx bxl-adobe",
         },
         {
           name: "Postman",
-          level: "90%",
+          icon: "bx bx-server",
         },
         {
           name: "Heroku",
-          level: "90%",
+          icon: "bx bxl-heroku",
         },
         {
           name: "VsCode",
-          level: "90%",
+          icon: "bx bxl-visual-studio",
         },
         {
           name: "Git",
-          level: "90%",
+          icon: "bx bxl-git",
         },
       ],
     },
-    programming: {
-      title: "Programming Languages",
+    {
+      section: "Programming Languages",
       skills: [
         {
           name: "Python",
-          level: "90%",
-        },
-        {
-          name: "C",
-          level: "80%",
+          icon: "bx bxl-python",
         },
         {
           name: "C++",
-          level: "80%",
+          icon: "bx bxl-c-plus-plus",
         },
         {
           name: "Java",
-          level: "70%",
+          icon: "bx bxl-java",
         },
         {
           name: "Javascript",
-          level: "70%",
+          icon: "bx bxl-javascript",
         },
         {
-          name: "PHP",
-          level: "70%",
+          name: "TypeScript",
+          icon: " bx bxl-typescript",
         },
       ],
     },
-  },
+  ],
   services: {
     title: "Services",
     desc: "What I can do for you",
