@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import slugify from "slugify";
+import readingTime from "reading-time/lib/reading-time";
 
 const BlogGridContainer = styled.div`
-  // margin-bottom: 1.5rem;
+  position: relative;
   padding: 1.5rem;
   background-color: #fff;
   border-radius: 0.5rem;
@@ -59,9 +60,23 @@ const BlogGridParagraph = styled.p`
   font-size: 1rem;
   color: #6b7280;
 `;
+const BlogReadTime = styled.div`
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  color: #6b7280;
+  z-index: 9999;
+`;
 
 const BlogGrid = ({ blog }) => {
   const { title, image, paragraph, tags } = blog;
+
+  const words = readingTime(paragraph.props.children, {
+    wordsPerMinute: 100,
+  });
+
+  const time = words.text;
+
   const slug = slugify(title, {
     lower: true,
     remove: /[*+~.()'"!:@]/g,
@@ -82,6 +97,7 @@ const BlogGrid = ({ blog }) => {
         <BlogGridParagraph className="blogGrid__paragragh">
           {paragraph}
         </BlogGridParagraph>
+        <BlogReadTime>{time}</BlogReadTime>
       </div>
     </BlogGridContainer>
   );
