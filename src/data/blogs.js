@@ -1,7 +1,7 @@
 const blogData = [
   {
     id: 1,
-    title: "Embrace Nature's Beauty: A Guide to Creating Your Own Terrarium",
+    title: "Embrace Nature's Beauty: Creating Your Own Terrarium",
     paragraph: (
       <>
         In today's fast-paced world, finding moments of tranquility and

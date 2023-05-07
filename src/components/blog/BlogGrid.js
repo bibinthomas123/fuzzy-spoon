@@ -4,12 +4,12 @@ import styled from "styled-components";
 import slugify from "slugify";
 
 const BlogGridContainer = styled.div`
-  margin-bottom: 1.5rem;
+  // margin-bottom: 1.5rem;
   padding: 1.5rem;
   background-color: #fff;
   border-radius: 0.5rem;
   min-height: 500px;
-  max-height: 550px;
+  max-height: 600px;
   min-width: 335px;
 `;
 

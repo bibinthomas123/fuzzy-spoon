@@ -1101,7 +1101,7 @@ img {
 @media (min-width: 1024px) {
   .blog__container {
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 10px 19px;
+    gap: 19px 19px;
   }
 }
 
@@ -1460,7 +1460,7 @@ img {
 
 .blogGrid__paragragh{
   display: -webkit-box;
-  -webkit-line-clamp:4 ;
+  -webkit-line-clamp:3 ;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
