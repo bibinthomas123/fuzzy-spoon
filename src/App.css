@@ -1458,13 +1458,6 @@ img {
   margin-right: 0.5rem;
 }
 
-
-
-.singleBlog{
-  margin-top: 50px;
-}
-
-
 .blogGrid__paragragh{
   display: -webkit-box;
   -webkit-line-clamp:4 ;

@@ -20,8 +20,8 @@ const SingleBlog = () => {
     return <PageNotFound />;
   }
   return (
-    <section className="section singleBlog">
-      <div className="container">
+    <section className="section">
+      <div className="container" style={{marginTop:"50px"}}>
         <div className="-mx-4 flex flex-wrap justify-center">
           <div className="w-full px-4">
             <div>
