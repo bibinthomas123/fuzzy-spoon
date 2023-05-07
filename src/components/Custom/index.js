@@ -1,7 +1,6 @@
 import React from "react";
 import "./style.css";
 
-// TODO: Hide if cursor not moved
 const CustomCursor = () => {
   const secondaryCursor = React.useRef(null);
   const positionRef = React.useRef({
@@ -61,6 +60,10 @@ const CustomCursor = () => {
       }
       if (secondaryCursor && secondaryCursor.current)
         secondaryCursor.current.style.transform = `translate3d(${destinationX}px, ${destinationY}px, 0)`;
+
+      // if (mouseX === destinationX && mouseY === destinationY) {
+      //   secondaryCursor.current.style.display = `none`;
+      // }
     };
     followMouse();
   }, []);

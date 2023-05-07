@@ -4,9 +4,17 @@ import { useParams } from "react-router-dom";
 import SharePost from "../components/SharePost";
 import PageNotFound from "../components/PageNotFound";
 import TagButton from "../components/TagButton";
+import slugify from "slugify";
+
 const SingleBlog = () => {
-  const { id } = useParams();
-  const blog = blogData.find((blog) => blog.id === Number(id));
+  const { slug } = useParams();
+  const blog = blogData.find((blog) => {
+    const slugifiedTitle = slugify(blog.title, {
+      lower: true,
+      remove: /[*+~.()'"!?:@]/g,
+    });
+    return slugifiedTitle === slug;
+  });
 
   if (!blog) {
     return <PageNotFound />;
@@ -15,7 +23,7 @@ const SingleBlog = () => {
     <section className="section singleBlog">
       <div className="container">
         <div className="-mx-4 flex flex-wrap justify-center">
-          <div className="w-full px-4 lg:w-8/12">
+          <div className="w-full px-4">
             <div>
               <h2 className="mb-8 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight">
                 {blog.title}

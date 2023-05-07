@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import slugify from "slugify";
 
 const BlogGridContainer = styled.div`
   margin-bottom: 1.5rem;
@@ -60,20 +61,27 @@ const BlogGridParagraph = styled.p`
 `;
 
 const BlogGrid = ({ blog }) => {
-  const { title, image, paragraph, tags, id } = blog;
+  const { title, image, paragraph, tags } = blog;
+  const slug = slugify(title, {
+    lower: true,
+    remove: /[*+~.()'"!:@]/g,
+  });
+
   return (
     <BlogGridContainer data-wow-delay=".1s">
-      <BlogGridLink to={`/blogs/${id}`} className="blogGrid">
+      <BlogGridLink to={`/blogs/${slug}`} className="blogGrid">
         <BlogGridImage src={image} alt="image" />
         <BlogGridSpan>{tags[0]}</BlogGridSpan>
       </BlogGridLink>
       <div>
         <BlogGridTitle>
-          <BlogGridLink to={`/blogs/${id}`} className="blogGrid__title">
+          <BlogGridLink to={`/blogs/${slug}`} className="blogGrid__title">
             {title}
           </BlogGridLink>
         </BlogGridTitle>
-        <BlogGridParagraph className="blogGrid__paragragh">{paragraph}</BlogGridParagraph>
+        <BlogGridParagraph className="blogGrid__paragragh">
+          {paragraph}
+        </BlogGridParagraph>
       </div>
     </BlogGridContainer>
   );
