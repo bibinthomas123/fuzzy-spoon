@@ -55,6 +55,4 @@ workflows:
   build-test-deploy:
     jobs:
       - build
-        filters:
-          branches:
-            only: main
+        
