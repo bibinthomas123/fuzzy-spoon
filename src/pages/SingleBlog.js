@@ -6,7 +6,6 @@ import PageNotFound from "../components/PageNotFound";
 import TagButton from "../components/TagButton";
 import slugify from "slugify";
 import readingTime from "reading-time/lib/reading-time";
-import { toast } from "react-toastify";
 import { motion } from "framer-motion";
 
 const SingleBlog = () => {
