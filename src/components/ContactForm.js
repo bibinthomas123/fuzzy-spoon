@@ -49,8 +49,6 @@ export default function ContactForm() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  const [error, setError] = useState(false);
-  const [success, setSuccess] = useState(false);
 
   const sendEmail = async (e) => {
     e.preventDefault();
@@ -73,13 +71,11 @@ export default function ContactForm() {
       )
       .then(
         (result) => {
-          setError(false);
           toast.success("Message sent!", {
             position: toast.POSITION.TOP_RIGHT,
           });
         },
         (error) => {
-          setError(true);
           toast.error("An error occurred.", {
             position: toast.POSITION.TOP_RIGHT,
           });
