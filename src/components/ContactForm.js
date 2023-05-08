@@ -61,6 +61,13 @@ export default function ContactForm() {
       return;
     }
 
+    if (!validateEmail(email)) {
+      toast.error("Please enter a valid email.", {
+        position: toast.POSITION.TOP_RIGHT,
+      });
+      return;
+    }
+
     await emailjs
       .sendForm(
         "service_y42skk7",
@@ -85,6 +92,11 @@ export default function ContactForm() {
     setName("");
     setEmail("");
     setMessage("");
+
+    function validateEmail(email) {
+      const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return re.test(email);
+    }
   };
   return (
     <>
