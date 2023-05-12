@@ -65,7 +65,6 @@ const BlogReadTime = styled.div`
   bottom: 10px;
   right: 10px;
   color: #6b7280;
-  z-index: 9999;
 `;
 
 const BlogGrid = ({ blog }) => {

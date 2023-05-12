@@ -5,12 +5,17 @@ import Nodejs from "../assests/images/nodejs.png";
 import Vscode from "../assests/images/vscode.png";
 import Python from "../assests/images/python.png";
 import { motion } from "framer-motion";
+
 const Container = styled.div`
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr); /* Changed to one column for mobile */
   grid-gap: 30px;
   margin: 30px;
-  color: #333;
+
+  @media (min-width: 768px) {
+    /* Apply two columns from 768px and above */
+    grid-template-columns: repeat(2, 1fr);
+  }
 `;
 
 const Title = styled.h2`
@@ -46,7 +51,7 @@ const SkillName = styled.p`
 `;
 
 const Section = styled(motion.div)`
-  position: relative; /* Add this line to establish a positioning context */
+  position: relative;
   background-color: #fff;
   padding: 20px;
   border-radius: 10px;
@@ -59,8 +64,13 @@ const Image = styled(motion.img)`
   right: 7px;
   width: 250px;
   height: 250px;
-`;
 
+  @media (max-width: 768px) {
+    /* Reduce the image size for mobile */
+    width: 150px;
+    height: 150px;
+  }
+`;
 function Skills() {
   const imagePath = [Reactjs, Nodejs, Vscode, Python];
 
