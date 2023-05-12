@@ -387,7 +387,7 @@ img {
 
 .home__content {
   grid-template-columns: 116px repeat(2, 1fr);
-  padding-top: 5.5rem;
+  padding-top: 2rem;
   column-gap: 2rem;
   align-items: center;
 }
@@ -536,7 +536,7 @@ img {
     text-align: center;
   }
   .home__content {
-    padding-top: 3.5rem;
+    padding-top: 0rem;
     grid-template-columns: 3fr;
   }
   .home__img {

@@ -4,7 +4,7 @@ import Reactjs from "../assests/images/frontend.png";
 import Nodejs from "../assests/images/nodejs.png";
 import Vscode from "../assests/images/vscode.png";
 import Python from "../assests/images/python.png";
-
+import { motion } from "framer-motion";
 const Container = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -45,7 +45,7 @@ const SkillName = styled.p`
   margin: 0;
 `;
 
-const Section = styled.div`
+const Section = styled(motion.div)`
   position: relative; /* Add this line to establish a positioning context */
   background-color: #fff;
   padding: 20px;
@@ -53,7 +53,7 @@ const Section = styled.div`
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 `;
 
-const Image = styled.img`
+const Image = styled(motion.img)`
   position: absolute;
   bottom: 4px;
   right: 7px;
@@ -62,16 +62,38 @@ const Image = styled.img`
 `;
 
 function Skills() {
-  const  imagePath = [Reactjs, Nodejs, Vscode, Python]
+  const imagePath = [Reactjs, Nodejs, Vscode, Python];
 
   return (
     <div className="container">
       <section className="skills section" id="skills">
-        <h2 className="section__title">Skills</h2>
-        <span className="section__subtitle">My skills</span>
+        <motion.h2
+          className="section__title"
+          initial={{ opacity: 0, y: -100 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, x: -100 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        >
+          Skills
+        </motion.h2>
+        <motion.span
+          className="section__subtitle"
+          initial={{ opacity: 0, y: -100 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, x: -100 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+        >
+          My skills
+        </motion.span>
         <Container>
-          {WebsiteData.skills.map((category,i) => (
-            <Section key={category.section}>
+          {WebsiteData.skills.map((category, i) => (
+            <Section
+              key={category.section}
+              initial={{ opacity: 0, y: -100 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 200}}
+              transition={{ duration: 0.5, delay: i * 0.2 }}
+            >
               <Title>{category.section}</Title>
               <SkillList>
                 {category.skills.map((skill) => (
@@ -81,7 +103,15 @@ function Skills() {
                   </SkillItem>
                 ))}
               </SkillList>
-              <Image src={imagePath[i]} alt="react" />
+
+              <Image
+                src={imagePath[i]}
+                alt="react"
+                initial={{ opacity: 0, scale: 0 }}
+                exit={{ opacity: 0, scale: 0 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: i * 0.2 }}
+              />
             </Section>
           ))}
         </Container>
