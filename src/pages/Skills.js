@@ -92,7 +92,6 @@ function Skills() {
               initial={{ opacity: 0, y: -100 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 200}} 
-        
               transition={{ duration: 0.5, delay: i * 0.2 }}
             >
               <Title>{category.section}</Title>
@@ -120,5 +119,7 @@ function Skills() {
     </div>
   );
 }
+
+// Exporting the component
 
 export default Skills;
