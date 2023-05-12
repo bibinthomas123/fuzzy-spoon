@@ -85,7 +85,7 @@ function Skills() {
     <div className="container">
       <section className="skills section" id="skills">
         <h2 className="section__title">Skills</h2>
-        <span className="section__subtitle">My skills</span>
+        <span className="section__subtitle">Skill Set</span>
         <Container>
           {WebsiteData.skills.map((category, i) => (
             <motion.div
