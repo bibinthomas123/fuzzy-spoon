@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { motion, useAnimation } from "framer-motion";
 import WebsiteData from "../data/content";
 import Reactjs from "../assests/images/frontend.png";
 import Nodejs from "../assests/images/nodejs.png";
@@ -46,7 +47,7 @@ const SkillName = styled.p`
 `;
 
 const Section = styled.div`
-  position: relative; /* Add this line to establish a positioning context */
+  position: relative;
   background-color: #fff;
   padding: 20px;
   border-radius: 10px;
@@ -62,7 +63,23 @@ const Image = styled.img`
 `;
 
 function Skills() {
-  const  imagePath = [Reactjs, Nodejs, Vscode, Python]
+  const imagePath = [Reactjs, Nodejs, Vscode, Python];
+
+  const controls = useAnimation();
+
+  const handleHover = async () => {
+    await controls.start({
+      rotate: 360,
+      transition: { duration: 1 },
+    });
+  };
+
+  const handleHoverEnd = async () => {
+    await controls.start({
+      rotate: 0,
+      transition: { duration: 1 },
+    });
+  };
 
   return (
     <div className="container">
@@ -70,19 +87,32 @@ function Skills() {
         <h2 className="section__title">Skills</h2>
         <span className="section__subtitle">My skills</span>
         <Container>
-          {WebsiteData.skills.map((category,i) => (
-            <Section key={category.section}>
-              <Title>{category.section}</Title>
-              <SkillList>
-                {category.skills.map((skill) => (
-                  <SkillItem key={skill.name}>
-                    <SkillIcon className={skill.icon}></SkillIcon>
-                    <SkillName>{skill.name}</SkillName>
-                  </SkillItem>
-                ))}
-              </SkillList>
-              <Image src={imagePath[i]} alt="react" />
-            </Section>
+          {WebsiteData.skills.map((category, i) => (
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              key={category.section}
+            >
+              <Section>
+                <Title>{category.section}</Title>
+                <SkillList>
+                  {category.skills.map((skill) => (
+                    <SkillItem key={skill.name}>
+                      <SkillIcon className={skill.icon}></SkillIcon>
+                      <SkillName>{skill.name}</SkillName>
+                    </SkillItem>
+                  ))}
+                </SkillList>
+                <Image
+                  src={imagePath[i]}
+                  alt="react"
+                  onMouseEnter={handleHover}
+                  onMouseLeave={handleHoverEnd}
+                  animate={controls}
+                />
+              </Section>
+            </motion.div>
           ))}
         </Container>
       </section>
