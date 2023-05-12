@@ -7,7 +7,7 @@ import { Suspense } from "react";
 import styled from "styled-components";
 import { OrbitControls } from "@react-three/drei";
 import Model from "../components/models/Myself";
-import { SpotLight, Shadow } from "@react-three/drei";
+import { SpotLight } from "@react-three/drei";
 
 const Styles = styled.div`
   canvas {
