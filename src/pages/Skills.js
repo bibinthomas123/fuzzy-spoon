@@ -47,7 +47,7 @@ const SkillName = styled.p`
 `;
 
 const Section = styled.div`
-  position: relative;
+  position: relative; /* Add this line to establish a positioning context */
   background-color: #fff;
   padding: 20px;
   border-radius: 10px;
@@ -61,6 +61,7 @@ const Image = styled.img`
   width: 250px;
   height: 250px;
 `;
+
 
 function Skills() {
   const imagePath = [Reactjs, Nodejs, Vscode, Python];
