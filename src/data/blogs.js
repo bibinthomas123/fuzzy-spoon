@@ -166,7 +166,7 @@ const blogData = [
     ),
     image:
       "https://images.unsplash.com/photo-1564121211835-e88c852648ab?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-    tags: ["Mental Health"],
+    tags: ["mental health"],
     publishDate: "02/May/2023",
   },
   {
@@ -362,7 +362,7 @@ const blogData = [
     ),
     image:
       "https://images.unsplash.com/photo-1640282693834-f941c0c012aa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-    tags: ["Technology", "guide"],
+    tags: ["technology", "guide"],
     publishDate: "10/Oct/2020",
   },
   {
@@ -406,7 +406,7 @@ const blogData = [
     image:
       "https://images.unsplash.com/photo-1489710437720-ebb67ec84dd2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
 
-    tags: ["Mental Health", "Self Improvement"],
+    tags: ["self improvement"],
     publishDate: "20/05/2023",
   },
   {
@@ -517,7 +517,7 @@ const blogData = [
     image:
       "https://images.unsplash.com/photo-1618989553444-5f3cd080356f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80",
 
-    tags: ["Mental health"],
+    tags: ["mental health"],
     publishDate: "17/05/2023",
   },
   {
