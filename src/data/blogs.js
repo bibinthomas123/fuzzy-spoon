@@ -262,8 +262,7 @@ const blogData = [
   },
   {
     id: 4,
-    title:
-      "Roadmap: A Guide for Full Stack Developers",
+    title: "Roadmap: A Guide for Full Stack Developers",
     paragraph: (
       <>
         Becoming a skilled full stack developer requires a comprehensive
@@ -363,7 +362,7 @@ const blogData = [
     ),
     image:
       "https://images.unsplash.com/photo-1640282693834-f941c0c012aa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-    tags: ["Technology" ,"guide"],
+    tags: ["Technology", "guide"],
     publishDate: "10/Oct/2020",
   },
   {
@@ -406,19 +405,148 @@ const blogData = [
     ),
     image:
       "https://images.unsplash.com/photo-1489710437720-ebb67ec84dd2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-   
-      tags: ["Mental Health", "Self Improvement"], 
-      publishDate: "20/05/2023",
+
+    tags: ["Mental Health", "Self Improvement"],
+    publishDate: "20/05/2023",
   },
   {
     id: 6,
+    title: "From Fear to Triumph: Embracing Evolution's Unlikely Ally",
+    paragraph: (
+      <>
+        Fear is an intrinsic human emotion that has played a pivotal role in our
+        survival and evolution throughout history. From our early ancestors
+        facing life-threatening predators to modern-day challenges, fear has
+        shaped our behavior and influenced the trajectory of our species. In
+        this blog, we will explore the complex relationship between fear and
+        evolution, delving into how fear has both hindered and propelled our
+        progress as a society.
+        <br />
+        <br />
+        <strong className="heading1">
+          Fear as an Evolutionary Survival Mechanism:
+        </strong>{" "}
+        <br />
+        <br />
+        Fear evolved as a crucial survival mechanism, enabling our ancestors to
+        recognize and respond to potential threats in their environment. It
+        served as an instinctual alarm system, triggering the fight-or-flight
+        response, which allowed our predecessors to effectively navigate
+        dangerous situations. Those who possessed a healthy level of fear were
+        more likely to survive and pass on their genes, leading to the
+        perpetuation of fear as a fundamental human trait.
+        <br />
+        <br />
+        <strong className="heading1">
+          Fear as a Catalyst for Progress:
+        </strong>{" "}
+        <br />
+        <br />
+        While fear is often associated with negative connotations, it has also
+        served as a powerful motivator throughout history. Fear of the unknown,
+        fear of failure, and fear of being left behind have driven individuals
+        and societies to push beyond their comfort zones, explore uncharted
+        territories, and achieve remarkable advancements. <br />
+        <br />
+        <strong className="heading1"> Innovation and Fear:</strong>
+        <br />
+        <br />
+        Innovation and progress often emerge in response to societal fears and
+        challenges. Consider the fear of disease and the subsequent development
+        of modern medicine, or the fear of famine leading to advancements in
+        agriculture. Fear has compelled humans to seek solutions and find ways
+        to overcome obstacles, propelling us forward in countless fields.
+        <br />
+        <br />
+        <strong className="heading1"> Social Progress and Fear:</strong>
+        <br />
+        <br />
+        Fear has not only influenced technological and scientific progress but
+        has also played a significant role in shaping our social structures.
+        Fear of social exclusion and ostracism has led to the establishment of
+        norms, ethics, and governance systems, fostering cooperation and
+        creating cohesive societies. Fear of inequality and injustice has
+        sparked social movements and struggles for equality, leading to
+        significant societal advancements. <br />
+        <br />
+        <strong className="heading1">
+          {" "}
+          Fear and the Dark Side of Progress:
+        </strong>{" "}
+        <br />
+        <br />
+        While fear has propelled us forward, it also has a darker side that can
+        impede progress. Fear of change, fear of the unknown, and fear of losing
+        power or control have hindered social and scientific advancements
+        throughout history. Resistance to new ideas and perspectives has often
+        stemmed from a place of fear, stifling innovation and limiting our
+        collective potential. <br />
+        <br />
+        <strong className="heading1">
+          {" "}
+          Managing Fear in the Modern World:
+        </strong>
+        <br />
+        <br />
+        In today's rapidly evolving world, fear takes on new forms. The advent
+        of technology has introduced unprecedented challenges and fears related
+        to privacy, artificial intelligence, and the changing job market. It is
+        essential to acknowledge and manage these fears effectively to ensure
+        that progress continues unabated. <br />
+        <br />
+        <strong className="heading1">Conclusion:</strong>
+        <br />
+        <br />
+        Fear and evolution are intricately linked, with fear both hindering and
+        propelling our progress as a society. While fear has undoubtedly played
+        a crucial role in our survival and development, it is vital to recognize
+        its potential to impede progress when left unchecked. By embracing a
+        healthy level of fear and effectively managing it, we can harness its
+        power as a catalyst for growth, innovation, and positive societal
+        change. Ultimately, understanding the role fear plays in our lives
+        enables us to navigate the challenges of our ever-evolving world and
+        shape a better future for ourselves and generations to come
+        <br />
+        <br />
+        <strong className="tags">
+          {" "}
+          #people #mentalhealth #trauma #health #culture #empathy
+        </strong>
+      </>
+    ),
+    image:
+      "https://images.unsplash.com/photo-1618989553444-5f3cd080356f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80",
+
+    tags: ["Mental health"],
+    publishDate: "17/05/2023",
+  },
+  {
+    id: 7,
     title: "The Thousand Splendid Suns- My All Time Favorite Book",
-    paragraph:
-      <>The Thousand Splendid Suns" by Khaled Hosseini is my favorite book, a powerful and emotionally resonant tale that takes us on a journey through the lives of two women in war-torn Afghanistan. Hosseini's captivating storytelling transports us into the lives of Mariam and Laila, two vastly different women brought together by fate and bonded by their resilience, love, and shared experiences. Through their eyes, we witness the struggles, sacrifices, and resilience of Afghan women in a society plagued by violence, oppression, and inequality. The book beautifully captures the complexity of human relationships, the strength of the human spirit, and the power of hope in the face of adversity. It is a poignant and thought-provoking novel that shines a light on the untold stories of women and their indomitable spirit in the midst of a harsh and unforgiving world. "The Thousand Splendid Suns" is a masterpiece that left a lasting impact on me, reminding me of the indescribable strength that resides within individuals, even in the darkest of times.</>,
+    paragraph: (
+      <>
+        The Thousand Splendid Suns" by Khaled Hosseini is my favorite book, a
+        powerful and emotionally resonant tale that takes us on a journey
+        through the lives of two women in war-torn Afghanistan. Hosseini's
+        captivating storytelling transports us into the lives of Mariam and
+        Laila, two vastly different women brought together by fate and bonded by
+        their resilience, love, and shared experiences. Through their eyes, we
+        witness the struggles, sacrifices, and resilience of Afghan women in a
+        society plagued by violence, oppression, and inequality. The book
+        beautifully captures the complexity of human relationships, the strength
+        of the human spirit, and the power of hope in the face of adversity. It
+        is a poignant and thought-provoking novel that shines a light on the
+        untold stories of women and their indomitable spirit in the midst of a
+        harsh and unforgiving world. "The Thousand Splendid Suns" is a
+        masterpiece that left a lasting impact on me, reminding me of the
+        indescribable strength that resides within individuals, even in the
+        darkest of times.
+      </>
+    ),
     image:
       "https://images.unsplash.com/photo-1590457429592-1abd191ad4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80",
 
-    tags: ["books" ], 
+    tags: ["books"],
     publishDate: "20/05/2023",
   },
 ];
