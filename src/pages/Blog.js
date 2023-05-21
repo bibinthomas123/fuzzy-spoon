@@ -111,7 +111,7 @@ function Blog() {
                 filteredBlogs.some((blog) => blog.tags.includes(tag)) && (
                   <motion.button
                     style={{
-                      margin: "0.5rem 0.5rem 0.5rem 0",
+                      margin: "0.5rem 0.5rem 2rem 0",
                       backgroundColor: tagColors[`tag${index + 1}`],
                       color: "#fff",
                       padding: "0.5rem 1rem",

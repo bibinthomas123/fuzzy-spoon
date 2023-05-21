@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./style.css";
 
 const CustomCursor = () => {
-  const secondaryCursor = React.useRef(null);
-  const positionRef = React.useRef({
+  const secondaryCursor = useRef(null);
+  const [isCursorVisible, setCursorVisible] = useState(true);
+  const [timer, setTimer] = useState(null);
+
+  const positionRef = useRef({
     mouseX: -100,
     mouseY: -100,
     destinationX: 0,
@@ -13,8 +16,8 @@ const CustomCursor = () => {
     key: -1,
   });
 
-  React.useEffect(() => {
-    document.addEventListener("mousemove", (event) => {
+  useEffect(() => {
+    const handleMouseMove = (event) => {
       const { clientX, clientY } = event;
 
       const mouseX = clientX;
@@ -24,12 +27,22 @@ const CustomCursor = () => {
         mouseX - secondaryCursor.current.clientWidth / 2;
       positionRef.current.mouseY =
         mouseY - secondaryCursor.current.clientHeight / 2;
-    });
 
-    return () => {};
-  }, []);
+      // Reset the cursor visibility timer
+      clearTimeout(timer);
+      setTimer(setTimeout(() => setCursorVisible(false), 2000));
+      setCursorVisible(true);
+    };
 
-  React.useEffect(() => {
+    document.addEventListener("mousemove", handleMouseMove);
+
+    return () => {
+      document.removeEventListener("mousemove", handleMouseMove);
+      clearTimeout(timer);
+    };
+  }, [timer]);
+
+  useEffect(() => {
     const followMouse = () => {
       positionRef.current.key = requestAnimationFrame(followMouse);
       const {
@@ -58,15 +71,24 @@ const CustomCursor = () => {
           positionRef.current.destinationY += distanceY;
         }
       }
-      if (secondaryCursor && secondaryCursor.current)
-        secondaryCursor.current.style.transform = `translate3d(${destinationX}px, ${destinationY}px, 0)`;
 
-      // if (mouseX === destinationX && mouseY === destinationY) {
-      //   secondaryCursor.current.style.display = `none`;
-      // }
+      if (secondaryCursor.current && secondaryCursor) {
+        secondaryCursor.current.style.transform = `translate3d(${destinationX}px, ${destinationY}px, 0)`;
+        secondaryCursor.current.style.opacity = isCursorVisible ? 1 : 0;
+         // Hide the cursor when not in motion
+
+        // Apply fading effect
+        if (isCursorVisible) {
+          secondaryCursor.current.style.transition = "opacity 0.3s";
+        } else {
+          secondaryCursor.current.style.transition = "opacity 0.5s";
+        }
+      }
     };
+
     followMouse();
-  }, []);
+  }, [isCursorVisible]);
+
   return (
     <div className={`cursor-wrapper default`}>
       <div className="secondary-cursor" ref={secondaryCursor}></div>

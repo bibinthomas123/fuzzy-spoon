@@ -1466,7 +1466,8 @@ img {
 }
 
  .singleBlog_para{
-  color:var( --gray-1)
+  color:var( --gray-1);
+  font-size:var(--normal-font-size)
  }
 
 
