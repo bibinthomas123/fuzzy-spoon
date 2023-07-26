@@ -3,12 +3,12 @@ import Data from "../components/Data";
 import { motion } from "framer-motion";
 import WebsiteData from "../data/content.js";
 import { Canvas } from "@react-three/fiber";
-import { Suspense } from "react";
+// import { Suspense } from "react";
 import styled from "styled-components";
-import { OrbitControls } from "@react-three/drei";
-import Model from "../components/models/Myself";
-import { SpotLight } from "@react-three/drei";
-
+// import { OrbitControls } from "@react-three/drei";
+// import Model from "../components/models/Myself";
+// import { SpotLight } from "@react-three/drei";
+import Shape from "../components/Shape";
 const Styles = styled.div`
   canvas {
     padding: 10px;
@@ -45,7 +45,7 @@ function Home() {
               <Social data={WebsiteData.home.socialItems} />
 
               {/* 3d images */}
-              <Canvas
+              {/* <Canvas
                 camera={{ position: [1, 0,7], fov: 20 }}
                 style={{
                   width: "100%",
@@ -67,6 +67,9 @@ function Home() {
                 </Suspense>
                 <OrbitControls enableZoom={false} />
                 <fog attach="fog" args={["#000000", 10, 50]} />
+              </Canvas> */}
+              <Canvas>
+                <Shape />
               </Canvas>
 
               <Data
