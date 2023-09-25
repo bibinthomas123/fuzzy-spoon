@@ -311,7 +311,7 @@ const WebsiteData = {
     },
     {
       id: uuidv4(),
-      name: "Wheather Forecast",
+      name: "weather Forecast",
       desc: "This app will enable real-time weather information for any location in the world.",
       img: "https://images.unsplash.com/photo-1567367975896-5a54e8542ddb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
     },
