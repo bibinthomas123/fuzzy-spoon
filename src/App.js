@@ -21,7 +21,7 @@ function App() {
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
-    }, 6000);
+    }, 7000);
   }, []);
   if (isLoading) {
     return <Preloader />;
