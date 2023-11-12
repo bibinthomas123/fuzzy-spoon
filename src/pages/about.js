@@ -76,7 +76,7 @@ function About() {
           <div class="overlay"></div>
           <div class="flight-info">
             <div class="flight-locations">
-              <img src="https://cdn-images-1.medium.com/max/800/1*QFU_XYAKOGJ9nunfqvem1w.png" />
+              <img src="https://cdn-images-1.medium.com/max/800/1*QFU_XYAKOGJ9nunfqvem1w.png"  alt="something"/>
               <h1>YMESLF</h1>
             </div>
           </div>
