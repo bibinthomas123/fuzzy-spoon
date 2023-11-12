@@ -82,7 +82,7 @@ const Projects = () => {
       requestAnimationFrame(distort);
     };
     distort();
-  }, []);
+  }, [ projContainer]);
 
   const show = (e) => {
     e.target.firstChild.innerText = "CLICK TO EXPLORE APP 🧐";
