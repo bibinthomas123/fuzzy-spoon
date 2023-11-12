@@ -5,7 +5,6 @@ import About from "./pages/about";
 import Home from "./pages/Home";
 import Skills from "./pages/Skills";
 import Layout from "./pages/Layout";
-import Service from "./pages/Service";
 import Projects from "./pages/Projects";
 import Contact from "./pages/contact";
 import Blog from "./pages/Blog";
@@ -35,7 +34,6 @@ function App() {
             <Route index element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/skills" element={<Skills />} />
-            <Route path="/service" element={<Service />} />
             <Route path="/portfolio" element={<Projects />} />
             <Route path="/blogs" element={<Blog />} />
             <Route path="/blogs/:slug" element={<SingleBlog />} />

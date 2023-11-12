@@ -45,7 +45,7 @@ function Header() {
                 <i className="uil uil-desktop-alt nav__icon" /> Skills
               </NavLink>
             </li>
-            <li className="nav__item">
+            {/* <li className="nav__item">
               <NavLink
                 to={"/service"}
                 className={({ isActive }) => {
@@ -54,7 +54,7 @@ function Header() {
               >
                 <i className="uil uil-briefcase-alt nav__icon" /> Services
               </NavLink>
-            </li>
+            </li> */}
             <li className="nav__item">
               <NavLink
                 to={"/portfolio"}

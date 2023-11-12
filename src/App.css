@@ -76,10 +76,10 @@
   --z-fixed: 100;
   --z-modal: 1000;
 }
-::selection {
+/* ::selection {
   color: var(--white-2);
   background-color: white;
-}
+} */
 /* Responsive typography */
 @media screen and (max-width: 992px) {
   :root {
@@ -98,7 +98,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* cursor: none; */
+  cursor: none;
+  user-select: nono;
 }
 
 html {
@@ -283,16 +284,25 @@ img {
 }
 
 /*=============== about ===============*/
+
 .about__container {
+  transition: 0.3s ease-out;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
   column-gap: 4rem;
+}
+
+
+.about__container img {
+  display: none;
+  position: relative;
 }
 
 .about__img {
   width: 350px;
   border-radius: 1.5rem;
   justify-self: center;
+  
 }
 
 .about__info {
@@ -1496,4 +1506,551 @@ img {
 }
 .tags{
 color: var(--gray-1);
+}
+
+
+.ticket{
+  position:relative;
+  height:410px;
+  width:630px;
+  background:black;
+  display:flex;
+  align-items:flex-end;
+  box-shadow: 0px 10px 40px rgba(0,0,0,.4);
+}
+.flight-info{
+  position:relative;
+  z-index:99;
+  padding:30px;
+}
+.flight-locations{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-top:-20px;
+}
+canvas{
+  position:absolute;
+  border-radius:1.5rem;
+  z-index:0;
+}
+.overlay{
+  position:absolute;
+  background:rgba(0, 0, 0, .2);
+  left:0; 
+
+  right:0;
+  top:0;
+  bottom:0;
+  z-index:1;
+}
+
+
+
+/* tets */
+
+#root .title-lines {
+  opacity: 0;
+  display: none;
+}
+
+
+
+#root main .content section p:nth-of-type(1) {
+  text-align: end;
+}
+#root main .content section p:nth-of-type(3) {
+  text-align: center;
+}
+#root main .content section p span {
+  font-family: "Major Mono Display", monospace;
+  color: #969595;
+  font-size: 12vw;
+}
+#root #para {
+  background-color: #121212;
+  color: white;
+  margin: 10vw 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  transition: 0.3s ease-out;
+  will-change: transform;
+}
+#root #para h2 {
+  font-size: 8.5vw;
+  width: 80%;
+}
+#root #para h2 small {
+  font-size: 8.5vw;
+}
+#root #para h1 {
+  font-size: 9.7vw;
+  width: 80%;
+  color: pink;
+  font-weight: bolder;
+  font-family: "raleway";
+}
+#root #para h1:nth-of-type(2) {
+  color: white;
+}
+#root #para small {
+  font-family: "Major Mono Display", monospace;
+  font-size: 3vw;
+}
+#root #para p {
+  width: 80%;
+  font-size: 5vw;
+}
+#root #para p span {
+  font-style: italic;
+  text-decoration: line-through;
+  color: lightsalmon;
+}
+#root #para:nth-of-type(7) {
+  margin-bottom: 22vw;
+}
+#root .text-slider {
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100vw;
+  border-bottom: 1px #5e5e5e solid;
+  border-top: 1px #5e5e5e solid;
+  margin-bottom: -6vw;
+}
+#root .text-slider span {
+  display: inline-block;
+  padding-left: 100%;
+  animation: marquee 90s linear infinite;
+  -webkit-text-stroke: 1px #bebebe;
+  font-size: 160px;
+  -webkit-text-fill-color: #121212;
+  font-family: raleway;
+  will-change: transform;
+}
+#root .text-slider span:hover {
+  -webkit-text-stroke: 1px lightsalmon;
+  -webkit-text-fill-color: lightsalmon;
+  font-style: italic;
+  text-decoration: line-through;
+}
+@keyframes marquee {
+  0% {
+    transform: translate(0, 0);
+ }
+  100% {
+    transform: translate(-100%, 0);
+ }
+}
+#root .honne-container, #root .fin-container, #root .pac-container, #root .kap-container, #root .trek-container {
+  transition: 0.3s ease-out;
+  will-change: transform;
+  width: 100vw;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 15vw 0;
+  font-family: "raleway";
+}
+#root .honne-container img, #root .fin-container img, #root .pac-container img, #root .kap-container img, #root .trek-container img {
+  display: none;
+  position: relative;
+}
+#root .honne-container #proj-text, #root .fin-container #proj-text, #root .pac-container #proj-text, #root .kap-container #proj-text, #root .trek-container #proj-text {
+  width: 35%;
+}
+#root .honne-container #proj-text h1, #root .fin-container #proj-text h1, #root .pac-container #proj-text h1, #root .kap-container #proj-text h1, #root .trek-container #proj-text h1 {
+  z-index: 1;
+  font-size: 8.9vmax;
+  font-family: "poiret one";
+  color: white;
+}
+#root .honne-container #proj-text ion-icon, #root .fin-container #proj-text ion-icon, #root .pac-container #proj-text ion-icon, #root .kap-container #proj-text ion-icon, #root .trek-container #proj-text ion-icon {
+  color: pink;
+  font-size: 30px;
+  margin: -0.4vw 1vw 0 0;
+}
+#root .honne-container #proj-text a, #root .fin-container #proj-text a, #root .pac-container #proj-text a, #root .kap-container #proj-text a, #root .trek-container #proj-text a {
+  display: flex;
+  align-items: center;
+  color: pink;
+}
+#root .honne-container #proj-text p, #root .fin-container #proj-text p, #root .pac-container #proj-text p, #root .kap-container #proj-text p, #root .trek-container #proj-text p {
+  text-align: justify;
+  color: white;
+  font-size: 17px;
+}
+#root .honne-container #proj-text small, #root .fin-container #proj-text small, #root .pac-container #proj-text small, #root .kap-container #proj-text small, #root .trek-container #proj-text small {
+  font-size: 18.5px;
+  color: pink;
+}
+#root .honne-container #proj-text ul, #root .fin-container #proj-text ul, #root .pac-container #proj-text ul, #root .kap-container #proj-text ul, #root .trek-container #proj-text ul {
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+}
+#root .honne-container #proj-text ul li, #root .fin-container #proj-text ul li, #root .pac-container #proj-text ul li, #root .kap-container #proj-text ul li, #root .trek-container #proj-text ul li {
+  color: white;
+  font-size: 17px;
+  list-style: initial;
+}
+#root .honne-container #honne-image, #root .fin-container #honne-image, #root .pac-container #honne-image, #root .kap-container #honne-image, #root .trek-container #honne-image {
+  position: relative;
+  width: 280px;
+  height: 630px;
+  position: relative;
+}
+#root .honne-container #honne-image:hover, #root .fin-container #honne-image:hover, #root .pac-container #honne-image:hover, #root .kap-container #honne-image:hover, #root .trek-container #honne-image:hover {
+  cursor: pointer;
+}
+#root .honne-container #honne-image p, #root .fin-container #honne-image p, #root .pac-container #honne-image p, #root .kap-container #honne-image p, #root .trek-container #honne-image p {
+  position: absolute;
+  bottom: -35px;
+  right: 15px;
+  color: #ebe8e8;
+}
+#root .honne-container #honne-image canvas, #root .fin-container #honne-image canvas, #root .pac-container #honne-image canvas, #root .kap-container #honne-image canvas, #root .trek-container #honne-image canvas {
+  border-radius: 30px;
+  filter: brightness(85%);
+  box-shadow: 1.2px 1.2px 4px #383838;
+}
+#root .honne-container #honne-image::after, #root .fin-container #honne-image::after, #root .pac-container #honne-image::after, #root .kap-container #honne-image::after, #root .trek-container #honne-image::after {
+  content: "PRJ WRK 002";
+  display: block;
+  transform: rotate(-90deg);
+  color: #ebe8e8;
+  position: absolute;
+  left: -27.5%;
+  bottom: 10%;
+}
+#root .honne-container #proj-text {
+  transform: translateY(-3.8%);
+}
+#root .fin-container, #root .kap-container, #root .trek-container {
+  flex-direction: column-reverse;
+  align-items: flex-end;
+  padding-right: 5%;
+  position: relative;
+}
+#root .fin-container .arrow, #root .kap-container .arrow, #root .trek-container .arrow {
+  width: 6vw;
+  height: 1.7px;
+  background: white;
+  transform: rotate(90deg);
+  position: absolute;
+  right: 13.35vw;
+  top: 24vw;
+}
+#root .fin-container .arrow::after, #root .kap-container .arrow::after, #root .trek-container .arrow::after {
+  content: "";
+  display: block;
+  width: 3vmax;
+  height: 1.7px;
+  background-color: white;
+  position: absolute;
+  right: -5px;
+  top: -1vw;
+  transform: rotate(40deg);
+}
+#root .fin-container .arrow::before, #root .kap-container .arrow::before, #root .trek-container .arrow::before {
+  content: "";
+  display: block;
+  width: 3vmax;
+  height: 1.7px;
+  background-color: white;
+  position: absolute;
+  right: -5px;
+  bottom: -1vw;
+  transform: rotate(-42deg);
+}
+#root .fin-container #circle-1, #root .kap-container #circle-1, #root .trek-container #circle-1 {
+  stroke-dasharray: 1300;
+  stroke-dashoffset: 1300;
+  animation: dash 2s linear forwards;
+  fill: transparent;
+  stroke: white;
+  position: absolute;
+  right: 5vw;
+  top: 13vw;
+}
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+ }
+}
+#root .fin-container #proj-text, #root .kap-container #proj-text, #root .trek-container #proj-text {
+  width: 72%;
+  text-align: start;
+  transform: translateX(-19%);
+  margin-bottom: 5vw;
+}
+#root .fin-container #proj-text p, #root .kap-container #proj-text p, #root .trek-container #proj-text p {
+  width: 70%;
+}
+#root .fin-container #proj-text h1, #root .kap-container #proj-text h1, #root .trek-container #proj-text h1 {
+  margin-left: -1%;
+  font-family: "Montserrat";
+}
+#root .fin-container #proj-text ul, #root .kap-container #proj-text ul, #root .trek-container #proj-text ul {
+  width: 50%;
+}
+#root .fin-container #fin-image, #root .kap-container #fin-image, #root .trek-container #fin-image, #root .fin-container #kap-image, #root .kap-container #kap-image, #root .trek-container #kap-image, #root .fin-container #trek-image, #root .kap-container #trek-image, #root .trek-container #trek-image {
+  width: 60vw;
+  height: 30vw;
+  position: relative;
+  margin-bottom: 5vw;
+}
+#root .fin-container #fin-image p, #root .kap-container #fin-image p, #root .trek-container #fin-image p, #root .fin-container #kap-image p, #root .kap-container #kap-image p, #root .trek-container #kap-image p, #root .fin-container #trek-image p, #root .kap-container #trek-image p, #root .trek-container #trek-image p {
+  position: absolute;
+  bottom: -30px;
+  right: 10px;
+  color: #ebe8e8;
+}
+#root .fin-container #fin-image::after, #root .kap-container #fin-image::after, #root .trek-container #fin-image::after, #root .fin-container #kap-image::after, #root .kap-container #kap-image::after, #root .trek-container #kap-image::after, #root .fin-container #trek-image::after, #root .kap-container #trek-image::after, #root .trek-container #trek-image::after {
+  content: "PRJ WRK 004";
+  display: block;
+  color: #ebe8e8;
+  position: absolute;
+  left: 1%;
+  top: -32px;
+}
+#root .fin-container #fin-image:hover, #root .kap-container #fin-image:hover, #root .trek-container #fin-image:hover, #root .fin-container #kap-image:hover, #root .kap-container #kap-image:hover, #root .trek-container #kap-image:hover, #root .fin-container #trek-image:hover, #root .kap-container #trek-image:hover, #root .trek-container #trek-image:hover {
+  cursor: pointer;
+}
+#root .fin-container #fin-image, #root .kap-container #fin-image, #root .trek-container #fin-image {
+  box-shadow: 0.5px 0.5px 4px #070707;
+}
+#root .trek-container #proj-text h1 {
+  font-family: raleway;
+}
+#root .trek-container #trek-image {
+  box-shadow: 1.3px 1.3px 6px #000;
+}
+#root .trek-container #trek-image::after {
+  content: "PRJ WRK 001";
+}
+#root .trek-container #trek-image:hover {
+  cursor: initial;
+}
+#root .kap-container {
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 5%;
+  position: relative;
+}
+#root .kap-container .arrow {
+  transform: rotate(120deg);
+}
+#root .kap-container #proj-text {
+  width: 58%;
+  text-align: start;
+  transform: translateX(-7%);
+  margin-bottom: -6vw;
+  align-self: flex-end;
+}
+#root .kap-container #proj-text h1 {
+  margin-left: -2%;
+}
+#root .kap-container #proj-text p {
+  width: 100%;
+}
+#root .kap-container #proj-text ul {
+  width: 75%;
+}
+#root .kap-container #kap-image {
+  box-shadow: 1.3px 1.3px 6px #000;
+}
+#root .kap-container #kap-image::after {
+  content: "PRJ WRK 003";
+}
+#root .pac-container {
+  justify-content: space-around;
+  padding-left: 5%;
+  position: relative;
+}
+#root .pac-container #pac-image {
+  width: 35vw;
+  height: 40vw;
+  position: relative;
+  margin-bottom: 5vw;
+  box-shadow: 1.3px 1.3px 6px #000;
+}
+#root .pac-container #pac-image p {
+  position: absolute;
+  bottom: -30px;
+  left: 5px;
+  color: #ebe8e8;
+}
+#root .pac-container #pac-image::after {
+  content: "PRJ WRK 005";
+  display: block;
+  color: #ebe8e8;
+  position: absolute;
+  right: -70px;
+  bottom: 55px;
+  transform: rotate(90deg);
+}
+#root .pac-container #pac-image:hover {
+  cursor: pointer;
+}
+#root .pac-container #proj-text {
+  width: 50%;
+}
+#root .pac-container #proj-text h1 {
+  font-size: 6.3vmax;
+  color: #eee;
+  font-family: "Press Start 2P", cursive;
+}
+#root .pac-container #proj-text p {
+  width: 80%;
+}
+#root .pac-container #proj-text ul {
+  columns: 1;
+}
+#root h6 {
+  text-align: center;
+  font-size: 4vw;
+  margin-bottom: 15vw;
+  color: #969494;
+}
+
+
+
+@keyframes bounce {
+  0% {
+    transform: scale(1.05);
+ }
+  100% {
+    transform: scale(0.95);
+ }
+}
+.modal-content {
+  background-color: red;
+  height: 90vh;
+  width: 90vw;
+}
+.modal-content iframe {
+  width: 100%;
+  height: 100%;
+}
+@media only screen and (max-width: 800px) {
+  svg {
+    display: none;
+ }
+  .arrow {
+    display: none;
+ }
+  #count {
+    font-size: 95px !important;
+    transform: translateY(-12px) !important;
+ }
+  #para small {
+    font-size: 4vw !important;
+ }
+  .content nav {
+    width: 90% !important;
+    left: -1% !important;
+    top: 5% !important;
+ }
+  .content section {
+    height: 93% !important;
+ }
+  .content section p {
+    margin-bottom: -4vw !important;
+    font-size: 11.1vw !important;
+ }
+  .content section p span {
+    font-size: 11.4vw !important;
+ }
+  .text-slider {
+    margin: 0 !important;
+ }
+  .text-slider span {
+    font-size: 120px !important;
+ }
+  .honne-container, .fin-container, .pac-container, .kap-container, .trek-container {
+    flex-direction: column !important;
+    align-items: center !important;
+    padding: 0% !important;
+ }
+  .honne-container #proj-text, .fin-container #proj-text, .pac-container #proj-text, .kap-container #proj-text, .trek-container #proj-text {
+    width: 80% !important;
+    margin: 8vw 0 15vw 0 !important;
+    transform: translate(0) !important;
+ }
+  .honne-container #proj-text h1, .fin-container #proj-text h1, .pac-container #proj-text h1, .kap-container #proj-text h1, .trek-container #proj-text h1 {
+    margin: 0 0 3vw 0 !important;
+    text-align: center;
+    font-size: 12vw !important;
+ }
+  .honne-container #proj-text ul, .fin-container #proj-text ul, .pac-container #proj-text ul, .kap-container #proj-text ul, .trek-container #proj-text ul {
+    width: 100% !important;
+ }
+  .honne-container #proj-text p, .fin-container #proj-text p, .pac-container #proj-text p, .kap-container #proj-text p, .trek-container #proj-text p {
+    width: 100% !important;
+ }
+  .honne-container #proj-text ion-icon, .fin-container #proj-text ion-icon, .pac-container #proj-text ion-icon, .kap-container #proj-text ion-icon, .trek-container #proj-text ion-icon {
+    margin: -0.8vw 2vw 0 0 !important;
+ }
+  .honne-container #proj-text::before, .fin-container #proj-text::before, .pac-container #proj-text::before, .kap-container #proj-text::before, .trek-container #proj-text::before {
+    display: none !important;
+ }
+  .honne-container #honne-image, .fin-container #honne-image, .pac-container #honne-image, .kap-container #honne-image, .trek-container #honne-image {
+    width: 250px !important;
+    height: 570px !important;
+    margin-bottom: 20px !important;
+ }
+  .honne-container #fin-image, .fin-container #fin-image, .pac-container #fin-image, .kap-container #fin-image, .trek-container #fin-image, .honne-container #kap-image, .fin-container #kap-image, .pac-container #kap-image, .kap-container #kap-image, .trek-container #kap-image, .honne-container #trek-image, .fin-container #trek-image, .pac-container #trek-image, .kap-container #trek-image, .trek-container #trek-image {
+    width: 85vw !important;
+    height: 45vw !important;
+ }
+  .honne-container #fin-image::before, .fin-container #fin-image::before, .pac-container #fin-image::before, .kap-container #fin-image::before, .trek-container #fin-image::before, .honne-container #kap-image::before, .fin-container #kap-image::before, .pac-container #kap-image::before, .kap-container #kap-image::before, .trek-container #kap-image::before, .honne-container #trek-image::before, .fin-container #trek-image::before, .pac-container #trek-image::before, .kap-container #trek-image::before, .trek-container #trek-image::before {
+    display: none !important;
+ }
+  .honne-container img, .fin-container img, .pac-container img, .kap-container img, .trek-container img {
+    display: block !important;
+    width: 86vw;
+    height: 45vw;
+    margin-top: 15px;
+    box-shadow: 1.3px 1.3px 6px #000;
+ }
+  .honne-container #pac-image, .fin-container #pac-image, .pac-container #pac-image, .kap-container #pac-image, .trek-container #pac-image {
+    width: 80vw !important;
+    height: 93vw !important;
+ }
+  .honne-container {
+    flex-direction: column-reverse !important;
+ }
+  .kap-container #proj-text, .trek-container #proj-text {
+    transform: translate(0) !important;
+    align-self: center !important;
+ }
+  .pac-container #proj-text {
+    margin-bottom: 10vw !important;
+ }
+  .pac-container #proj-text h1 {
+    text-align: center;
+    font-size: 8.5vw !important;
+ }
+  form {
+    padding-left: 3.5%;
+ }
+  form p {
+    line-height: 8.3vw !important;
+ }
+  form p:nth-of-type(1) {
+    padding-left: 0 !important;
+ }
+  form input {
+    width: 90% !important;
+    font-size: 4.5vw !important;
+ }
+  form button {
+    width: 115px !important;
+    height: 115px !important;
+    font-size: 16px !important;
+ }
+  form #socials {
+    flex-direction: column !important;
+ }
 }

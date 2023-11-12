@@ -38,13 +38,7 @@ function Preloader() {
         delay: 0.5,
       })
       .to(".content", { width: "100%", ease: Expo.easeInOut, duration: 0.7 })
-      .to(".title-lines", { display: "block", duration: 0.1 })
-      .to(".title-lines", {
-        opacity: 1,
-        stagger: 0.15,
-        ease: Expo.easeInOut,
-        duration: 0.6,
-      });
+
   };
 
   return (
@@ -59,7 +53,8 @@ function Preloader() {
         <Count id="count" className="hide">
           {counter}%
         </Count>
-        <Content className="content"></Content>
+        <Content className="content">
+        </Content>
       </Loading>
     </AppContainer>
   );
